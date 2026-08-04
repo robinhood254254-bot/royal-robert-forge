@@ -148,6 +148,7 @@ function RootComponent() {
         <Footer />
       </div>
       <FloatingWhatsApp />
+      <ScrollToTop />
       <Toaster position="top-center" richColors />
     </QueryClientProvider>
   );
