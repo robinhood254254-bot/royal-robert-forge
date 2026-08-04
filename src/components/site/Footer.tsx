@@ -7,24 +7,14 @@ export function Footer() {
     <footer className="border-t border-border bg-secondary/60">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-            <span
-              aria-hidden
-              className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-primary/40 bg-secondary font-display text-sm font-bold text-primary"
-            >
-              RR
-            </span>
-            <span className="font-display text-base font-bold">Royal Robert Digital Solutions</span>
-          </div>
+          <Logo />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             One dedicated professional building corporate websites, e-commerce platforms, custom
             web applications and business software — with direct, one-on-one communication from
             first conversation to launch.
           </p>
-          <p className="mt-4 text-xs text-muted-foreground/70">
-            Logo and additional brand assets pending upload.
-          </p>
         </div>
+
 
         <div>
           <h3 className="font-display text-sm font-semibold">Explore</h3>
