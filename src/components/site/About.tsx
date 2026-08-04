@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { MessageSquare, Search, PenTool, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import person from "@/assets/inspiration_advancement.png.asset.json";
+import person from "@/assets/inspiration_advancement.webp";
 
 const pillars = [
   {
@@ -37,7 +37,7 @@ export function About() {
             className="absolute inset-4 rounded-full bg-[var(--gradient-gold)] opacity-20 blur-3xl"
           />
           <img
-            src={person.url}
+            src={person}
             alt="A client engaging with a tablet in front of the Royal Robert brand mark"
             loading="lazy"
             className="relative w-full rounded-full border border-border shadow-[var(--shadow-elegant)]"

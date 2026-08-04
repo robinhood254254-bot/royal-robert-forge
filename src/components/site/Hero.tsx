@@ -6,9 +6,9 @@ import { Reveal } from "./Reveal";
 import { BrowserFrame } from "./Frames";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { waLink } from "@/lib/site";
-import innovation from "@/assets/innovation_technology_and_SEO.webp.asset.json";
-import dealership from "@/assets/landing_page_for_a_car_website.png.asset.json";
-import mobileResponsive from "@/assets/Mockup_mobile_responsiveness.webp.asset.json";
+import innovation from "@/assets/innovation_technology_and_SEO.webp";
+import dealership from "@/assets/landing_page_for_a_car_website.webp";
+import mobileResponsive from "@/assets/Mockup_mobile_responsiveness.webp";
 
 const headlines = [
   {
@@ -90,7 +90,7 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.12]"
         style={{
-          backgroundImage: `url(${innovation.url})`,
+          backgroundImage: `url(${innovation})`,
           backgroundSize: "cover",
           backgroundPosition: "top right",
           maskImage: "linear-gradient(to left, rgba(0,0,0,0.85), transparent 70%)",
@@ -202,7 +202,7 @@ export function Hero() {
           <div className="relative mx-auto max-w-xl">
             <BrowserFrame label="royalautos.co.ke — dealership build">
               <img
-                src={dealership.url}
+                src={dealership}
                 alt="Luxury car dealership website landing page designed by Royal Robert Digital Solutions"
                 loading="eager"
                 className="aspect-[16/10] w-full object-cover"
@@ -210,7 +210,7 @@ export function Hero() {
             </BrowserFrame>
             <div className="absolute -bottom-10 -left-4 w-28 sm:-left-10 sm:w-36">
               <img
-                src={mobileResponsive.url}
+                src={mobileResponsive}
                 alt="Mobile view of a responsive vehicle platform"
                 loading="lazy"
                 className="w-full rounded-2xl border border-border shadow-[var(--shadow-elegant)]"
