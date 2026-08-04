@@ -99,7 +99,7 @@ export function Hero() {
       />
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-lines opacity-50" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pb-20 lg:pt-14">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pb-20 lg:pt-14">
         <div>
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3 py-1.5 text-xs font-semibold text-primary">
@@ -107,7 +107,7 @@ export function Hero() {
             </span>
           </Reveal>
 
-          <h1 className="mt-6 min-h-[9.5rem] text-4xl font-bold leading-[1.08] sm:min-h-[11rem] sm:text-5xl lg:min-h-[13rem] lg:text-6xl">
+          <h1 className="mt-6 min-h-[8.5rem] text-4xl font-bold leading-[1.08] sm:min-h-[10rem] sm:text-5xl lg:min-h-[11.5rem] lg:text-6xl">
             <span className="block text-navy-deep">{current.lead}</span>
             <span key={index} className="mt-2 block caret text-gradient-gold">
               {typed}
