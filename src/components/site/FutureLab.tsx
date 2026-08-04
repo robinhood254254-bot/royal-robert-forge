@@ -34,7 +34,7 @@ export function FutureLab() {
                 loading="lazy"
                 className="w-full rounded-2xl border border-border object-cover shadow-[var(--shadow-elegant)]"
               />
-              <figcaption className="absolute left-4 top-4 rounded-full border border-primary/30 bg-secondary/60/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-primary backdrop-blur">
+              <figcaption className="absolute left-4 top-4 rounded-full border border-primary/30 bg-card/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-primary backdrop-blur">
                 Prototype · Laptop
               </figcaption>
             </figure>
@@ -48,7 +48,7 @@ export function FutureLab() {
                   loading="lazy"
                   className="w-full rounded-2xl border border-border object-cover shadow-[var(--shadow-elegant)]"
                 />
-                <figcaption className="absolute left-4 top-4 rounded-full border border-primary/30 bg-secondary/60/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-primary backdrop-blur">
+                <figcaption className="absolute left-4 top-4 rounded-full border border-primary/30 bg-card/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-primary backdrop-blur">
                   Concept · Desktop
                 </figcaption>
               </figure>

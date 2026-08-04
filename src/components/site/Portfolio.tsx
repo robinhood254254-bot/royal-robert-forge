@@ -143,7 +143,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                   />
                 </div>
               </BrowserFrame>
-              <span className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-primary/30 bg-secondary/60/90 px-4 py-2 text-xs text-muted-foreground backdrop-blur transition-opacity duration-300 group-hover:opacity-0">
+              <span className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-primary/30 bg-card/90 px-4 py-2 text-xs text-muted-foreground backdrop-blur transition-opacity duration-300 group-hover:opacity-0">
                 <MousePointer2 className="size-3.5 text-primary" /> Hover to scroll the full page
               </span>
             </div>

@@ -42,7 +42,7 @@ export function About() {
             loading="lazy"
             className="relative w-full rounded-full border border-border shadow-[var(--shadow-elegant)]"
           />
-          <div className="relative mx-auto -mt-8 w-fit rounded-full border border-primary/30 bg-secondary/60/90 px-5 py-2.5 text-center backdrop-blur">
+          <div className="relative mx-auto -mt-8 w-fit rounded-full border border-primary/30 bg-card/90 px-5 py-2.5 text-center backdrop-blur">
             <p className="font-display text-sm font-semibold">Human first, technology second</p>
           </div>
         </Reveal>
