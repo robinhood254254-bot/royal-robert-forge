@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
 import innovation from "@/assets/innovation_technology_and_SEO.webp.asset.json";
+import store from "@/assets/online-store.webp.asset.json";
 
 export const services = [
   {
@@ -109,6 +110,41 @@ export function Services({ compact = false }: { compact?: boolean }) {
             </Reveal>
           ))}
         </div>
+
+
+        <Reveal delay={140}>
+          <div className="mt-14 grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-elegant)] lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
+            <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
+              <img
+                src={store.url}
+                alt="Online store dashboard showing sales growth, conversion analytics and secure checkout"
+                loading="lazy"
+                className="w-full object-contain transition-transform duration-700 ease-[var(--ease-out-soft)] hover:scale-[1.03]"
+              />
+            </div>
+            <div>
+              <p className="eyebrow">E-commerce solutions</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">Launch your online store</h3>
+              <p className="mt-3 text-muted-foreground">
+                Product catalogues, secure payments, order notifications and live sales analytics —
+                a store designed to grow revenue, not just to look good.
+              </p>
+              <div className="mt-5 grid grid-cols-2 gap-3">
+                {[
+                  { k: "SEO", v: "Optimised" },
+                  { k: "Mobile", v: "Responsive" },
+                  { k: "Secure", v: "Payments" },
+                  { k: "24/7", v: "Business online" },
+                ].map((f) => (
+                  <div key={f.k} className="rounded-xl border border-border bg-secondary/50 p-3">
+                    <p className="font-display text-sm font-bold text-primary">{f.k}</p>
+                    <p className="text-xs text-muted-foreground">{f.v}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
 
         {compact && (
           <Reveal delay={120}>
