@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Phone, Mail } from "lucide-react";
 import { WHATSAPP_LINK, WHATSAPP_NUMBER, SECONDARY_NUMBER, SECONDARY_TEL, EMAIL } from "@/lib/site";
 import { Logo } from "./Header";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Footer() {
   return (
@@ -58,7 +59,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-start gap-2.5 text-muted-foreground transition-colors hover:text-primary"
               >
-                <MessageCircle className="mt-0.5 size-4 shrink-0 text-whatsapp" />
+                <WhatsAppIcon className="mt-0.5 size-4 shrink-0 text-whatsapp" />
                 <span>
                   <span className="block text-foreground">{WHATSAPP_NUMBER}</span>
                   Primary — WhatsApp chat & project inquiries
