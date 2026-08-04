@@ -184,9 +184,102 @@
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold);
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: 700;
 }
+
+@utility glow-primary {
+  box-shadow: var(--shadow-gold);
+}
+
+@utility glow-green {
+  box-shadow: var(--shadow-glow-green);
+}
+
+@utility nav-pill {
+  background: color-mix(in oklab, var(--background) 82%, transparent);
+  backdrop-filter: blur(18px);
+  border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent);
+  box-shadow: 0 14px 40px -22px oklch(0.3 0.08 260 / 55%);
+}
+
+@utility float-bounce {
+  animation: rr-bounce 2.2s var(--ease-out-soft) infinite;
+}
+
+@utility pulse-ring {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: var(--color-whatsapp);
+    opacity: 0.55;
+    animation: rr-pulse 2s ease-out infinite;
+    z-index: -1;
+  }
+}
+
+@utility nav-enter {
+  animation: rr-nav-in 0.8s var(--ease-out-soft) both;
+}
+
+@utility caret {
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 2px;
+    vertical-align: -0.12em;
+    background: var(--color-primary);
+    animation: rr-caret 1s steps(2, start) infinite;
+  }
+}
+
+@keyframes rr-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes rr-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}
+
+@keyframes rr-nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(-22px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rr-caret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 
 @utility lift {
   transition:
