@@ -68,7 +68,7 @@ const gbpTiers = [
 
 export function Pricing() {
   return (
-    <section className="border-y border-border bg-navy-deep py-20 lg:py-28" id="pricing">
+    <section className="border-y border-border bg-secondary/60 py-20 lg:py-28" id="pricing">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Investment</p>
@@ -88,7 +88,7 @@ export function Pricing() {
               <article
                 className={cn(
                   "flex h-full flex-col rounded-2xl border bg-surface/70 p-7 lift",
-                  t.featured ? "border-gold/50 shadow-[var(--shadow-gold)]" : "border-border",
+                  t.featured ? "border-primary/50 shadow-[var(--shadow-gold)]" : "border-border",
                 )}
               >
                 <h3 className="font-display text-lg font-semibold">{t.name}</h3>
@@ -97,7 +97,7 @@ export function Pricing() {
                 <ul className="mt-5 flex-1 space-y-2.5 text-sm text-muted-foreground">
                   {t.points.map((p) => (
                     <li key={p} className="flex gap-2">
-                      <Check className="mt-0.5 size-4 shrink-0 text-gold" />
+                      <Check className="mt-0.5 size-4 shrink-0 text-primary" />
                       {p}
                     </li>
                   ))}
@@ -125,7 +125,7 @@ export function Pricing() {
                 className={cn(
                   "relative flex h-full flex-col rounded-2xl border bg-surface/70 p-7 lift",
                   t.recommended
-                    ? "border-gold bg-[var(--gradient-panel)] shadow-[var(--shadow-gold)]"
+                    ? "border-primary bg-[var(--gradient-panel)] shadow-[var(--shadow-gold)]"
                     : "border-border",
                 )}
               >
@@ -139,7 +139,7 @@ export function Pricing() {
                 <ul className="mt-5 flex-1 space-y-2.5 text-sm text-muted-foreground">
                   {t.points.map((p) => (
                     <li key={p} className="flex gap-2">
-                      <Check className="mt-0.5 size-4 shrink-0 text-gold" />
+                      <Check className="mt-0.5 size-4 shrink-0 text-primary" />
                       {p}
                     </li>
                   ))}

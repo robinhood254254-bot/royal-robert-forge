@@ -7,11 +7,11 @@ import mockMobile from "@/assets/Mockup_mobile_responsiveness.webp.asset.json";
 
 export function FutureLab() {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-navy-deep py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-20 lg:py-28">
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-lines opacity-30" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-secondary/60 px-3 py-1.5 text-xs font-medium text-gold">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-secondary/60 px-3 py-1.5 text-xs font-medium text-primary">
             <FlaskConical className="size-3.5" /> Concept · Prototype · Not yet released
           </span>
           <h2 className="mt-5 text-3xl font-bold sm:text-4xl">
@@ -34,7 +34,7 @@ export function FutureLab() {
                 loading="lazy"
                 className="w-full rounded-2xl border border-border object-cover shadow-[var(--shadow-elegant)]"
               />
-              <figcaption className="absolute left-4 top-4 rounded-full border border-gold/30 bg-navy-deep/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-gold backdrop-blur">
+              <figcaption className="absolute left-4 top-4 rounded-full border border-primary/30 bg-card/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-primary backdrop-blur">
                 Prototype · Laptop
               </figcaption>
             </figure>
@@ -48,7 +48,7 @@ export function FutureLab() {
                   loading="lazy"
                   className="w-full rounded-2xl border border-border object-cover shadow-[var(--shadow-elegant)]"
                 />
-                <figcaption className="absolute left-4 top-4 rounded-full border border-gold/30 bg-navy-deep/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-gold backdrop-blur">
+                <figcaption className="absolute left-4 top-4 rounded-full border border-primary/30 bg-card/90 px-3 py-1 text-[0.65rem] uppercase tracking-wider text-primary backdrop-blur">
                   Concept · Desktop
                 </figcaption>
               </figure>
@@ -62,7 +62,7 @@ export function FutureLab() {
                   className="w-full object-cover"
                 />
               </PhoneFrame>
-              <p className="mt-3 text-center text-[0.65rem] uppercase tracking-wider text-gold">
+              <p className="mt-3 text-center text-[0.65rem] uppercase tracking-wider text-primary">
                 Concept · Mobile
               </p>
             </Reveal>
@@ -85,7 +85,7 @@ export function FutureLab() {
             },
           ].map((c, i) => (
             <Reveal key={c.t} delay={i * 90}>
-              <div className="h-full rounded-2xl border border-dashed border-gold/25 bg-surface/60 p-6">
+              <div className="h-full rounded-2xl border border-dashed border-primary/25 bg-surface/60 p-6">
                 <h3 className="font-display text-base font-semibold">{c.t}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{c.d}</p>
                 <p className="mt-3 text-[0.65rem] uppercase tracking-wider text-muted-foreground/70">

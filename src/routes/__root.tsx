@@ -8,7 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
-import { MessageCircle } from "lucide-react";
+
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -16,6 +16,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { WHATSAPP_LINK } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 
 function NotFoundComponent() {
@@ -100,6 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dbb85942-f650-4004-bfc5-2401e74a4283/id-preview-cb79d206--def38dd1-473e-4499-87b8-94f73486b646.lovable.app-1785881676766.png" },
     ],
     links: [
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -157,11 +159,13 @@ function FloatingWhatsApp() {
       href={WHATSAPP_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-      className="fixed bottom-5 right-5 z-50 grid size-14 place-items-center rounded-full bg-whatsapp text-navy-deep shadow-[var(--shadow-elegant)] transition-transform duration-300 hover:scale-105"
+      aria-label="Click to chat on WhatsApp"
+      className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-whatsapp px-4 py-3.5 font-semibold text-white glow-green float-bounce transition-transform duration-300 hover:scale-105"
     >
-      <MessageCircle className="size-6" />
+      <span className="pulse-ring relative grid place-items-center">
+        <WhatsAppIcon className="size-6" />
+      </span>
+      <span className="hidden text-sm sm:inline">Click to Chat</span>
     </a>
   );
 }
-

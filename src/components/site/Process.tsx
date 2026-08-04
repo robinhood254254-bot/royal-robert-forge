@@ -27,7 +27,7 @@ export function Process() {
           {steps.map((s, i) => (
             <Reveal key={s.t} delay={(i % 4) * 80} as="li">
               <div className="relative h-full rounded-2xl border border-border bg-surface/70 p-6 lift">
-                <span className="font-display text-3xl font-bold text-gold/30">
+                <span className="font-display text-3xl font-bold text-primary/30">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-2 font-display text-base font-semibold">{s.t}</h3>
