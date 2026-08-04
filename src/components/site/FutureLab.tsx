@@ -1,13 +1,13 @@
 import { FlaskConical } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { PhoneFrame } from "./Frames";
-import mock2 from "@/assets/Mockup_2.webp.asset.json";
-import mock3 from "@/assets/Mockup_3.webp.asset.json";
-import mockMobile from "@/assets/Mockup_mobile_responsiveness.webp.asset.json";
+import mock2 from "@/assets/Mockup_2.webp";
+import mock3 from "@/assets/Mockup_3.webp";
+import mockMobile from "@/assets/Mockup_mobile_responsiveness.webp";
 
 export function FutureLab() {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-14 sm:py-16 lg:py-20">
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-lines opacity-30" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
@@ -29,7 +29,7 @@ export function FutureLab() {
           <Reveal className="lg:col-span-7">
             <figure className="relative">
               <img
-                src={mock3.url}
+                src={mock3}
                 alt="Concept prototype of a vehicle inventory platform shown on a laptop"
                 loading="lazy"
                 className="w-full rounded-2xl border border-border object-cover shadow-[var(--shadow-elegant)]"
@@ -43,7 +43,7 @@ export function FutureLab() {
             <Reveal delay={100}>
               <figure className="relative">
                 <img
-                  src={mock2.url}
+                  src={mock2}
                   alt="Concept prototype of the dealership trading platform on a desktop display"
                   loading="lazy"
                   className="w-full rounded-2xl border border-border object-cover shadow-[var(--shadow-elegant)]"
@@ -56,7 +56,7 @@ export function FutureLab() {
             <Reveal delay={180} className="mx-auto w-40 sm:w-44">
               <PhoneFrame>
                 <img
-                  src={mockMobile.url}
+                  src={mockMobile}
                   alt="Concept prototype of the vehicle platform on a mobile phone"
                   loading="lazy"
                   className="w-full object-cover"

@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { MessageSquare, Search, PenTool, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import person from "@/assets/inspiration_advancement.png.asset.json";
+import person from "@/assets/inspiration_advancement.webp";
 
 const pillars = [
   {
@@ -29,7 +29,7 @@ const pillars = [
 
 export function About() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28" id="about">
+    <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20" id="about">
       <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <Reveal className="relative mx-auto w-full max-w-md">
           <div
@@ -37,7 +37,7 @@ export function About() {
             className="absolute inset-4 rounded-full bg-[var(--gradient-gold)] opacity-20 blur-3xl"
           />
           <img
-            src={person.url}
+            src={person}
             alt="A client engaging with a tablet in front of the Royal Robert brand mark"
             loading="lazy"
             className="relative w-full rounded-full border border-border shadow-[var(--shadow-elegant)]"

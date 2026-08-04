@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import innovation from "@/assets/innovation_technology_and_SEO.webp.asset.json";
-import store from "@/assets/online-store.webp.asset.json";
+import innovation from "@/assets/innovation_technology_and_SEO.webp";
+import store from "@/assets/online-store.webp";
 
 export const services = [
   {
@@ -66,12 +66,12 @@ export const services = [
 
 export function Services({ compact = false }: { compact?: boolean }) {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-14 sm:py-16 lg:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-20"
         style={{
-          backgroundImage: `url(${innovation.url})`,
+          backgroundImage: `url(${innovation})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           maskImage: "radial-gradient(70% 60% at 50% 0%, rgba(0,0,0,0.8), transparent 70%)",
@@ -116,7 +116,7 @@ export function Services({ compact = false }: { compact?: boolean }) {
           <div className="mt-14 grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-elegant)] lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
             <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
               <img
-                src={store.url}
+                src={store}
                 alt="Online store dashboard showing sales growth, conversion analytics and secure checkout"
                 loading="lazy"
                 className="w-full object-contain transition-transform duration-700 ease-[var(--ease-out-soft)] hover:scale-[1.03]"

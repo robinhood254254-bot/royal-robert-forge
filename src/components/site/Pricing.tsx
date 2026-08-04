@@ -68,7 +68,7 @@ const gbpTiers = [
 
 export function Pricing() {
   return (
-    <section className="border-y border-border bg-secondary/60 py-20 lg:py-28" id="pricing">
+    <section className="border-y border-border bg-secondary/60 py-14 sm:py-16 lg:py-20" id="pricing">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Investment</p>
@@ -110,7 +110,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <Reveal className="mt-20 max-w-2xl">
+        <Reveal className="mt-14 max-w-2xl">
           <p className="eyebrow">Google Business Profile</p>
           <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Local visibility packages</h2>
           <p className="mt-4 text-muted-foreground">

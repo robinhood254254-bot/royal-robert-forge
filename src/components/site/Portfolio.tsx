@@ -3,14 +3,14 @@ import { ChevronDown, ExternalLink, MousePointer2 } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { BrowserFrame, PhoneFrame } from "./Frames";
 import { cn } from "@/lib/utils";
-import dentals from "@/assets/lebanondentals.com.png.asset.json";
-import oceansmiles from "@/assets/oceansmiles.png.asset.json";
-import appMockups from "@/assets/portfolio-mockups.webp.asset.json";
-import dealership from "@/assets/landing_page_for_a_car_website.png.asset.json";
-import luxuryTall from "@/assets/luxury_car_dealership_and_trading_platform_2.webp.asset.json";
-import luxuryPair from "@/assets/luxury_car_dealership_and_trading_platform.webp.asset.json";
-import responsive from "@/assets/mobile_responsiveness.webp.asset.json";
-import mobileMock from "@/assets/Mockup_mobile_responsiveness.webp.asset.json";
+import dentals from "@/assets/lebanondentals.com.webp";
+import oceansmiles from "@/assets/oceansmiles.webp";
+import appMockups from "@/assets/portfolio-mockups.webp";
+import dealership from "@/assets/landing_page_for_a_car_website.webp";
+import luxuryTall from "@/assets/luxury_car_dealership_and_trading_platform_2.webp";
+import luxuryPair from "@/assets/luxury_car_dealership_and_trading_platform.webp";
+import responsive from "@/assets/mobile_responsiveness.webp";
+import mobileMock from "@/assets/Mockup_mobile_responsiveness.webp";
 
 const projects = [
   {
@@ -18,7 +18,7 @@ const projects = [
     label: "Ocean Smile Dental Clinic",
     tag: "Satisfied client",
     url: "oceansmilesdentals.com",
-    image: oceansmiles.url,
+    image: oceansmiles,
     alt: "Ocean Smile Dental Clinic website designed by Royal Robert Digital Solutions",
     summary:
       "A same-day emergency dental clinic website in Mombasa with instant booking, service navigation and a trust-first hero.",
@@ -35,7 +35,7 @@ const projects = [
     label: "Lebanon Dental Care",
     tag: "Completed website",
     url: "lebanondentals.com",
-    image: dentals.url,
+    image: dentals,
     alt: "Lebanon Dental Care clinic website homepage with services menu",
     summary:
       "A complete clinic website with a full treatment directory, emergency contact bar and online booking call-to-action.",
@@ -52,7 +52,7 @@ const projects = [
     label: "Royal Autos",
     tag: "Dealership landing page",
     url: "royalautos.co.ke",
-    image: dealership.url,
+    image: dealership,
     alt: "Royal Autos luxury dealership landing page with inventory dashboard preview",
     summary:
       "Premium dealership landing experience with vehicle search, filtering and a live inventory dashboard preview.",
@@ -69,7 +69,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
   const [open, setOpen] = useState<string | null>("lebanon");
 
   return (
-    <section className="py-20 lg:py-28" id="portfolio">
+    <section className="py-14 sm:py-16 lg:py-20" id="portfolio">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Selected work</p>
@@ -149,13 +149,13 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
         </div>
 
         {/* Immersive vertical demonstration */}
-        <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+        <div className="mt-12 grid gap-8 lg:gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <Reveal>
             <div className="scroll-demo group relative">
               <BrowserFrame label="luxury dealership & trading platform — full page walkthrough">
                 <div className="h-[420px] overflow-hidden">
                   <img
-                    src={luxuryTall.url}
+                    src={luxuryTall}
                     alt="Full-page scrolling walkthrough of a luxury car dealership and trading platform"
                     loading="lazy"
                     className="w-full object-cover object-top"
@@ -195,7 +195,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
 
         {/* Responsive storytelling */}
         {!compact && (
-          <div className="mt-20 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="mt-14 grid gap-8 lg:gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <Reveal>
               <p className="eyebrow">Responsive by design</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
@@ -221,7 +221,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
             </Reveal>
             <Reveal delay={120} className="relative">
               <img
-                src={responsive.url}
+                src={responsive}
                 alt="Desktop, tablet and mobile presentations of a responsive digital product"
                 loading="lazy"
                 className="w-full rounded-2xl border border-border object-cover shadow-[var(--shadow-elegant)]"
@@ -229,7 +229,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
               <div className="absolute -bottom-8 -left-2 w-24 sm:w-32">
                 <PhoneFrame>
                   <img
-                    src={mobileMock.url}
+                    src={mobileMock}
                     alt="Mobile vehicle platform layout"
                     loading="lazy"
                     className="w-full object-cover"
@@ -237,7 +237,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                 </PhoneFrame>
               </div>
               <img
-                src={luxuryPair.url}
+                src={luxuryPair}
                 alt="Desktop and mobile views of the vehicle trading platform"
                 loading="lazy"
                 className="absolute -right-3 -top-8 hidden w-28 rounded-xl border border-border shadow-[var(--shadow-elegant)] sm:block lg:w-36"
@@ -247,11 +247,11 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
         )}
 
         {/* Product & app design showcase */}
-        <div className="mt-20 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="mt-14 grid gap-8 lg:gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl border border-border bg-secondary/40 p-4">
               <img
-                src={appMockups.url}
+                src={appMockups}
                 alt="Collection of mobile app screens: delivery tracking, checkout, dashboards, instalment payments and video consultation"
                 loading="lazy"
                 className="w-full object-contain transition-transform duration-700 ease-[var(--ease-out-soft)] hover:scale-[1.03]"

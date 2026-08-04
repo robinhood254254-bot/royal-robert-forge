@@ -4,7 +4,7 @@ import { Menu, X, Phone, ChevronDown, Globe, ShoppingCart, Code2, MapPin, Smartp
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { WHATSAPP_LINK, SECONDARY_TEL } from "@/lib/site";
-import mark from "@/assets/royal-robert-mark.png.asset.json";
+import mark from "@/assets/royal-robert-mark.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -46,7 +46,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <span className="flex min-w-0 items-center gap-2.5">
       <img
-        src={mark.url}
+        src={mark}
         alt="Royal Robert Digital Solutions crown logo"
         className={compact ? "h-11 w-11 shrink-0 object-contain" : "h-14 w-14 shrink-0 object-contain"}
       />

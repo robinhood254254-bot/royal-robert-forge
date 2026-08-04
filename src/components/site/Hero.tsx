@@ -6,9 +6,9 @@ import { Reveal } from "./Reveal";
 import { BrowserFrame } from "./Frames";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { waLink } from "@/lib/site";
-import innovation from "@/assets/innovation_technology_and_SEO.webp.asset.json";
-import dealership from "@/assets/landing_page_for_a_car_website.png.asset.json";
-import mobileResponsive from "@/assets/Mockup_mobile_responsiveness.webp.asset.json";
+import innovation from "@/assets/innovation_technology_and_SEO.webp";
+import dealership from "@/assets/landing_page_for_a_car_website.webp";
+import mobileResponsive from "@/assets/Mockup_mobile_responsiveness.webp";
 
 const headlines = [
   {
@@ -90,7 +90,7 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.12]"
         style={{
-          backgroundImage: `url(${innovation.url})`,
+          backgroundImage: `url(${innovation})`,
           backgroundSize: "cover",
           backgroundPosition: "top right",
           maskImage: "linear-gradient(to left, rgba(0,0,0,0.85), transparent 70%)",
@@ -99,7 +99,7 @@ export function Hero() {
       />
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-lines opacity-50" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pb-28 lg:pt-20">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pb-20 lg:pt-14">
         <div>
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3 py-1.5 text-xs font-semibold text-primary">
@@ -107,7 +107,7 @@ export function Hero() {
             </span>
           </Reveal>
 
-          <h1 className="mt-6 min-h-[9.5rem] text-4xl font-bold leading-[1.08] sm:min-h-[11rem] sm:text-5xl lg:min-h-[13rem] lg:text-6xl">
+          <h1 className="mt-6 min-h-[8.5rem] text-4xl font-bold leading-[1.08] sm:min-h-[10rem] sm:text-5xl lg:min-h-[11.5rem] lg:text-6xl">
             <span className="block text-navy-deep">{current.lead}</span>
             <span key={index} className="mt-2 block caret text-gradient-gold">
               {typed}
@@ -202,7 +202,7 @@ export function Hero() {
           <div className="relative mx-auto max-w-xl">
             <BrowserFrame label="royalautos.co.ke — dealership build">
               <img
-                src={dealership.url}
+                src={dealership}
                 alt="Luxury car dealership website landing page designed by Royal Robert Digital Solutions"
                 loading="eager"
                 className="aspect-[16/10] w-full object-cover"
@@ -210,7 +210,7 @@ export function Hero() {
             </BrowserFrame>
             <div className="absolute -bottom-10 -left-4 w-28 sm:-left-10 sm:w-36">
               <img
-                src={mobileResponsive.url}
+                src={mobileResponsive}
                 alt="Mobile view of a responsive vehicle platform"
                 loading="lazy"
                 className="w-full rounded-2xl border border-border shadow-[var(--shadow-elegant)]"
