@@ -93,7 +93,7 @@ export function Services({ compact = false }: { compact?: boolean }) {
           {(compact ? services.slice(0, 6) : services).map((s, i) => (
             <Reveal key={s.title} delay={(i % 3) * 90}>
               <article className="group h-full rounded-2xl border border-border bg-surface/80 p-6 lift">
-                <span className="grid size-11 place-items-center rounded-xl border border-primary/25 bg-secondary/60">
+                <span className="grid size-11 place-items-center rounded-xl border border-primary/25 bg-primary/10">
                   <s.icon className="size-5 text-primary" />
                 </span>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
