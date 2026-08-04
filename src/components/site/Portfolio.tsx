@@ -78,7 +78,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                 </BrowserFrame>
                 <div className="p-6">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full border border-gold/30 px-2.5 py-0.5 text-[0.65rem] uppercase tracking-wider text-gold">
+                    <span className="rounded-full border border-primary/30 px-2.5 py-0.5 text-[0.65rem] uppercase tracking-wider text-primary">
                       {p.tag}
                     </span>
                     {p.link && (
@@ -86,7 +86,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                         href={p.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-gold"
+                        className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary"
                       >
                         Visit site <ExternalLink className="size-3" />
                       </a>
@@ -98,7 +98,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                     type="button"
                     onClick={() => setOpen(open === p.id ? null : p.id)}
                     aria-expanded={open === p.id}
-                    className="mt-4 inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-gold"
+                    className="mt-4 inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-primary"
                   >
                     {open === p.id ? "Hide details" : "Project details"}
                     <ChevronDown
@@ -117,7 +117,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                     <ul className="overflow-hidden text-sm text-muted-foreground">
                       {p.details.map((d) => (
                         <li key={d} className="mt-2 flex gap-2">
-                          <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                          <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
                           {d}
                         </li>
                       ))}
@@ -143,8 +143,8 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                   />
                 </div>
               </BrowserFrame>
-              <span className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-gold/30 bg-navy-deep/90 px-4 py-2 text-xs text-muted-foreground backdrop-blur transition-opacity duration-300 group-hover:opacity-0">
-                <MousePointer2 className="size-3.5 text-gold" /> Hover to scroll the full page
+              <span className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-primary/30 bg-secondary/60/90 px-4 py-2 text-xs text-muted-foreground backdrop-blur transition-opacity duration-300 group-hover:opacity-0">
+                <MousePointer2 className="size-3.5 text-primary" /> Hover to scroll the full page
               </span>
             </div>
           </Reveal>
@@ -166,7 +166,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                 "Dark, high-contrast automotive art direction",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
                   {t}
                 </li>
               ))}
@@ -194,7 +194,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
                   { k: "0", v: "Horizontal overflow" },
                 ].map((m) => (
                   <div key={m.v} className="rounded-xl border border-border bg-surface/70 p-4">
-                    <p className="font-display text-lg font-bold text-gold">{m.k}</p>
+                    <p className="font-display text-lg font-bold text-primary">{m.k}</p>
                     <p className="mt-1 text-xs text-muted-foreground">{m.v}</p>
                   </div>
                 ))}

@@ -65,7 +65,7 @@ export const services = [
 
 export function Services({ compact = false }: { compact?: boolean }) {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-navy-deep py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-20 lg:py-28">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-20"
@@ -93,13 +93,13 @@ export function Services({ compact = false }: { compact?: boolean }) {
           {(compact ? services.slice(0, 6) : services).map((s, i) => (
             <Reveal key={s.title} delay={(i % 3) * 90}>
               <article className="group h-full rounded-2xl border border-border bg-surface/80 p-6 lift">
-                <span className="grid size-11 place-items-center rounded-xl border border-gold/25 bg-navy-deep">
-                  <s.icon className="size-5 text-gold" />
+                <span className="grid size-11 place-items-center rounded-xl border border-primary/25 bg-secondary/60">
+                  <s.icon className="size-5 text-primary" />
                 </span>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <h3 className="font-display text-lg font-semibold">{s.title}</h3>
                   {"badge" in s && s.badge ? (
-                    <span className="rounded-full border border-gold/30 px-2 py-0.5 text-[0.65rem] uppercase tracking-wider text-gold">
+                    <span className="rounded-full border border-primary/30 px-2 py-0.5 text-[0.65rem] uppercase tracking-wider text-primary">
                       {s.badge}
                     </span>
                   ) : null}
@@ -113,7 +113,7 @@ export function Services({ compact = false }: { compact?: boolean }) {
         {compact && (
           <Reveal delay={120}>
             <div className="mt-10">
-              <Button asChild variant="outline" className="border-gold/40 bg-transparent">
+              <Button asChild variant="outline" className="border-primary/40 bg-transparent">
                 <Link to="/services">See all services</Link>
               </Button>
             </div>

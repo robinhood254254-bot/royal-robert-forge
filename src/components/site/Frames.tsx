@@ -17,17 +17,17 @@ export function BrowserFrame({
         className,
       )}
     >
-      <div className="flex items-center gap-2 border-b border-border bg-navy-deep px-3 py-2">
+      <div className="flex items-center gap-2 border-b border-border bg-secondary/60 px-3 py-2">
         <span className="flex gap-1.5" aria-hidden>
           <span className="size-2.5 rounded-full bg-destructive/70" />
-          <span className="size-2.5 rounded-full bg-gold/70" />
+          <span className="size-2.5 rounded-full bg-primary/70" />
           <span className="size-2.5 rounded-full bg-whatsapp/70" />
         </span>
         <span className="mx-auto max-w-[60%] truncate rounded-md bg-secondary px-3 py-1 text-[0.65rem] text-muted-foreground">
           {label}
         </span>
       </div>
-      <div className="bg-navy">{children}</div>
+      <div className="bg-secondary/60">{children}</div>
     </div>
   );
 }
@@ -36,7 +36,7 @@ export function PhoneFrame({ children, className }: { children: ReactNode; class
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-[1.75rem] border-4 border-surface-raised bg-navy-deep p-1 shadow-[var(--shadow-elegant)]",
+        "overflow-hidden rounded-[1.75rem] border-4 border-surface-raised bg-secondary/60 p-1 shadow-[var(--shadow-elegant)]",
         className,
       )}
     >

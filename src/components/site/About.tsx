@@ -42,7 +42,7 @@ export function About() {
             loading="lazy"
             className="relative w-full rounded-full border border-border shadow-[var(--shadow-elegant)]"
           />
-          <div className="relative mx-auto -mt-8 w-fit rounded-full border border-gold/30 bg-navy-deep/90 px-5 py-2.5 text-center backdrop-blur">
+          <div className="relative mx-auto -mt-8 w-fit rounded-full border border-primary/30 bg-secondary/60/90 px-5 py-2.5 text-center backdrop-blur">
             <p className="font-display text-sm font-semibold">Human first, technology second</p>
           </div>
         </Reveal>
@@ -65,7 +65,7 @@ export function About() {
             {pillars.map((p, i) => (
               <Reveal key={p.title} delay={i * 90}>
                 <div className="h-full rounded-2xl border border-border bg-surface/70 p-5 lift">
-                  <p.icon className="size-5 text-gold" />
+                  <p.icon className="size-5 text-primary" />
                   <h3 className="mt-3 font-display text-base font-semibold">{p.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
                 </div>

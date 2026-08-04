@@ -158,32 +158,32 @@ export function Contact() {
                 <p className="mt-1 text-sm text-muted-foreground">
                   Primary channel — fastest replies, share files, screenshots and project details.
                 </p>
-                <p className="mt-3 font-display text-sm font-semibold text-gold">{WHATSAPP_NUMBER}</p>
+                <p className="mt-3 font-display text-sm font-semibold text-primary">{WHATSAPP_NUMBER}</p>
               </a>
             </Reveal>
             <Reveal delay={90}>
               <a href={SECONDARY_TEL} className="block rounded-2xl border border-border bg-surface/70 p-6 lift">
-                <Phone className="size-5 text-gold" />
+                <Phone className="size-5 text-primary" />
                 <h3 className="mt-3 font-display text-base font-semibold">Call directly</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Secondary number — voice calls, follow-ups and alternative inquiries.
                 </p>
-                <p className="mt-3 font-display text-sm font-semibold text-gold">{SECONDARY_NUMBER}</p>
+                <p className="mt-3 font-display text-sm font-semibold text-primary">{SECONDARY_NUMBER}</p>
               </a>
             </Reveal>
             <Reveal delay={180}>
               <a href={`mailto:${EMAIL}`} className="block rounded-2xl border border-border bg-surface/70 p-6 lift">
-                <Mail className="size-5 text-gold" />
+                <Mail className="size-5 text-primary" />
                 <h3 className="mt-3 font-display text-base font-semibold">Email</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   For documents, formal briefs and proposals.
                 </p>
-                <p className="mt-3 break-all font-display text-sm font-semibold text-gold">{EMAIL}</p>
+                <p className="mt-3 break-all font-display text-sm font-semibold text-primary">{EMAIL}</p>
               </a>
             </Reveal>
             <Reveal delay={240}>
-              <div className="rounded-2xl border border-dashed border-gold/30 bg-surface/50 p-6">
-                <Info className="size-5 text-gold" />
+              <div className="rounded-2xl border border-dashed border-primary/30 bg-surface/50 p-6">
+                <Info className="size-5 text-primary" />
                 <h3 className="mt-3 font-display text-base font-semibold">Before you submit</h3>
                 <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                   {[
@@ -194,7 +194,7 @@ export function Contact() {
                     "An approximate budget range",
                   ].map((t) => (
                     <li key={t} className="flex gap-2">
-                      <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
+                      <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
                       {t}
                     </li>
                   ))}
@@ -355,7 +355,7 @@ export function Contact() {
                 <Button type="submit" size="lg" disabled={submitting} className="sm:flex-1">
                   {submitting ? "Preparing…" : (<><Send /> Send project inquiry</>)}
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-gold/40 bg-transparent">
+                <Button asChild size="lg" variant="outline" className="border-primary/40 bg-transparent">
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                     <MessageCircle /> Chat instead
                   </a>
@@ -398,7 +398,7 @@ function Field({
   return (
     <div>
       <Label htmlFor={htmlFor} className="text-sm">
-        {label} {required && <span className="text-gold">*</span>}
+        {label} {required && <span className="text-primary">*</span>}
       </Label>
       <div className="mt-1.5">{children}</div>
       {hint && !error && <p className="mt-1.5 text-xs text-muted-foreground">{hint}</p>}
