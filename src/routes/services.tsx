@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SITE_URL } from "@/lib/site";
 import { Services } from "@/components/site/Services";
 import { Process } from "@/components/site/Process";
 import { FutureLab } from "@/components/site/FutureLab";
@@ -8,6 +9,8 @@ const title = "Services — Websites, E-commerce & Custom Software | Royal Rober
 const description =
   "Corporate and portfolio websites, e-commerce, custom web applications, business software, Google Business Profile setup and car dealership platforms.";
 
+const url = `${SITE_URL}/services`;
+
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
@@ -16,8 +19,12 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: url },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: url }],
   }),
   component: ServicesPage,
 });
