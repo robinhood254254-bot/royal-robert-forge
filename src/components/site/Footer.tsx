@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { WHATSAPP_LINK, WHATSAPP_NUMBER, SECONDARY_NUMBER, SECONDARY_TEL, EMAIL } from "@/lib/site";
+import { Logo } from "./Header";
 
 export function Footer() {
   return (
