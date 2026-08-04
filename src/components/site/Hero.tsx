@@ -88,7 +88,7 @@ export function Hero() {
     <section className="relative isolate overflow-hidden hero-surface">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-25"
+        className="pointer-events-none absolute inset-0 opacity-[0.12]"
         style={{
           backgroundImage: `url(${innovation.url})`,
           backgroundSize: "cover",
