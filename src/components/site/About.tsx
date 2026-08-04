@@ -29,7 +29,7 @@ const pillars = [
 
 export function About() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28" id="about">
+    <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20" id="about">
       <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <Reveal className="relative mx-auto w-full max-w-md">
           <div

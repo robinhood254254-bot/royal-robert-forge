@@ -7,7 +7,7 @@ import mockMobile from "@/assets/Mockup_mobile_responsiveness.webp";
 
 export function FutureLab() {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-14 sm:py-16 lg:py-20">
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-lines opacity-30" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">

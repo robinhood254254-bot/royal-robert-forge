@@ -66,7 +66,7 @@ export const services = [
 
 export function Services({ compact = false }: { compact?: boolean }) {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-14 sm:py-16 lg:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-20"

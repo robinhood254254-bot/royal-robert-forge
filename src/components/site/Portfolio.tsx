@@ -69,7 +69,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
   const [open, setOpen] = useState<string | null>("lebanon");
 
   return (
-    <section className="py-20 lg:py-28" id="portfolio">
+    <section className="py-14 sm:py-16 lg:py-20" id="portfolio">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Selected work</p>
@@ -149,7 +149,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
         </div>
 
         {/* Immersive vertical demonstration */}
-        <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+        <div className="mt-12 grid gap-8 lg:gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <Reveal>
             <div className="scroll-demo group relative">
               <BrowserFrame label="luxury dealership & trading platform — full page walkthrough">
@@ -195,7 +195,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
 
         {/* Responsive storytelling */}
         {!compact && (
-          <div className="mt-20 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="mt-14 grid gap-8 lg:gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <Reveal>
               <p className="eyebrow">Responsive by design</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
@@ -247,7 +247,7 @@ export function Portfolio({ compact = false }: { compact?: boolean }) {
         )}
 
         {/* Product & app design showcase */}
-        <div className="mt-20 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="mt-14 grid gap-8 lg:gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl border border-border bg-secondary/40 p-4">
               <img
