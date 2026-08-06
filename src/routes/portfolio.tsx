@@ -4,7 +4,7 @@ import { Portfolio } from "@/components/site/Portfolio";
 import { FutureLab } from "@/components/site/FutureLab";
 import { PageIntro } from "@/components/site/PageIntro";
 
-const title = "Portfolio — Completed Websites & Platform Demonstrations | Royal Robert Digital Solutions";
+const title = "Portfolio — Websites & Platform Demos | Royal Robert";
 const description =
   "Explore completed builds including Lebanon Dental Care, luxury car dealership platforms, responsive product design and vehicle software prototypes.";
 

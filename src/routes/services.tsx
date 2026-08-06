@@ -5,7 +5,7 @@ import { Process } from "@/components/site/Process";
 import { FutureLab } from "@/components/site/FutureLab";
 import { PageIntro } from "@/components/site/PageIntro";
 
-const title = "Services — Websites, E-commerce & Custom Software | Royal Robert Digital Solutions";
+const title = "Web, E-commerce & Custom Software Services | Royal Robert";
 const description =
   "Corporate and portfolio websites, e-commerce, custom web applications, business software, Google Business Profile setup and car dealership platforms.";
 

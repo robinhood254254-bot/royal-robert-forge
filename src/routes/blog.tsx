@@ -6,7 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { waLink, SITE_URL } from "@/lib/site";
 
-const title = "Blog — Digital Solutions Growing Fastest in Kenya | Royal Robert Digital Solutions";
+const title = "Kenya's Fastest-Growing Digital Solutions | Royal Robert";
 const description =
   "What Kenyan businesses are investing in right now: mobile-first websites, M-Pesa checkout, e-commerce, AI tools, eTIMS compliance and Google Business Profile visibility.";
 const url = `${SITE_URL}/blog`;
