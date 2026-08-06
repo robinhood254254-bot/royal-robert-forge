@@ -4,7 +4,7 @@ import { Contact } from "@/components/site/Contact";
 import { Process } from "@/components/site/Process";
 import { PageIntro } from "@/components/site/PageIntro";
 
-const title = "Contact & Consultation | Royal Robert Digital Solutions";
+const title = "Contact & Consultation | Royal Robert Digital";
 const description =
   "Book a one-on-one consultation. WhatsApp +254 710 837 083 or call +254 792 645 485 — send a detailed project inquiry and get a custom quote.";
 

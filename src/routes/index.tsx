@@ -9,7 +9,7 @@ import { Process } from "@/components/site/Process";
 import { Pricing } from "@/components/site/Pricing";
 import { Contact } from "@/components/site/Contact";
 
-const title = "Royal Robert Digital Solutions | Websites, E-commerce & Business Software in Kenya";
+const title = "Websites & Business Software in Kenya | Royal Robert";
 const description =
   "Premium websites, e-commerce platforms, custom web apps and Google Business Profile services built one-on-one. Projects from KSh 19,999. Chat on WhatsApp.";
 

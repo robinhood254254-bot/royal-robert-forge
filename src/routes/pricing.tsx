@@ -4,7 +4,7 @@ import { Pricing } from "@/components/site/Pricing";
 import { Process } from "@/components/site/Process";
 import { PageIntro } from "@/components/site/PageIntro";
 
-const title = "Pricing — Website Projects from KSh 19,999 | Royal Robert Digital Solutions";
+const title = "Pricing — Websites from KSh 19,999 | Royal Robert";
 const description =
   "Transparent pricing: websites from KSh 19,999 up to KSh 100,000–150,000+, plus Google Business Profile packages at KSh 3,000, 5,000 and 8,000.";
 
