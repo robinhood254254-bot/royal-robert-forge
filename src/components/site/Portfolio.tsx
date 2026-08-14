@@ -4,6 +4,7 @@ import { Reveal } from "./Reveal";
 import { BrowserFrame, PhoneFrame } from "./Frames";
 import { cn } from "@/lib/utils";
 import dentals from "@/assets/lebanondentals.com.webp";
+import mombasaHearing from "@/assets/mombasahearing.com.webp";
 import oceansmiles from "@/assets/oceansmiles.webp";
 import appMockups from "@/assets/portfolio-mockups.webp";
 import dealership from "@/assets/landing_page_for_a_car_website.webp";
