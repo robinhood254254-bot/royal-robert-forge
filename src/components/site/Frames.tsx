@@ -32,6 +32,28 @@ export function BrowserFrame({
   );
 }
 
+export function MonitorFrame({
+  children,
+  label = "royalrobert.co.ke",
+  className,
+}: {
+  children: ReactNode;
+  label?: string;
+  className?: string;
+}) {
+  return (
+    <div className={cn("relative", className)}>
+      <div className="rounded-[1.25rem] border border-border bg-surface-raised p-2 shadow-[var(--shadow-elegant)]">
+        <BrowserFrame label={label} className="rounded-lg shadow-none">
+          {children}
+        </BrowserFrame>
+      </div>
+      <div aria-hidden className="mx-auto h-5 w-24 rounded-b-md bg-surface-raised sm:w-28" />
+      <div aria-hidden className="mx-auto h-2 w-40 rounded-full bg-surface-raised sm:w-52" />
+    </div>
+  );
+}
+
 export function PhoneFrame({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <div
