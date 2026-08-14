@@ -15,6 +15,23 @@ import mobileMock from "@/assets/Mockup_mobile_responsiveness.webp";
 
 const projects = [
   {
+    id: "mombasa-hearing",
+    label: "Mombasa Hearing Centre",
+    tag: "Satisfied client",
+    url: "mombasahearing.com",
+    image: mombasaHearing,
+    alt: "Mombasa Hearing Centre website designed by Royal Robert Digital Solutions",
+    summary:
+      "A specialist hearing-care website for Mombasa Hearing Centre — 23+ years of audiology practice presented with clear appointment booking and patient education.",
+    details: [
+      "Appointment booking and hearing-test conversion paths",
+      "Structured services, hearing aids and education mega menus",
+      "Bilingual, patient-friendly messaging (English & Kiswahili)",
+      "Accessibility widget, WhatsApp chat and top contact bar",
+    ],
+    link: "https://www.mombasahearing.com/",
+  },
+  {
     id: "oceansmiles",
     label: "Ocean Smile Dental Clinic",
     tag: "Satisfied client",
