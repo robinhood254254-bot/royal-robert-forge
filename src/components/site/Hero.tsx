@@ -3,29 +3,52 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Sparkles, Timer, Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import { BrowserFrame } from "./Frames";
+import { MonitorFrame } from "./Frames";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { waLink } from "@/lib/site";
 import innovation from "@/assets/innovation_technology_and_SEO.webp";
 import dealership from "@/assets/landing_page_for_a_car_website.webp";
+import mombasaHearing from "@/assets/mombasahearing.com.webp";
+import oceansmiles from "@/assets/oceansmiles.webp";
+import onlineStore from "@/assets/online-store.webp";
 import mobileResponsive from "@/assets/Mockup_mobile_responsiveness.webp";
 
 const headlines = [
   {
     lead: "We listen carefully,",
     typed: "then build what your business actually needs",
+    image: mombasaHearing,
+    site: "mombasahearing.com — Mombasa Hearing Centre",
+    caption: "Live client",
+    project: "Specialist hearing care",
+    alt: "Mombasa Hearing Centre website built by Royal Robert Digital Solutions",
   },
   {
     lead: "Websites engineered to",
     typed: "turn visitors into paying customers",
+    image: oceansmiles,
+    site: "oceansmilesdentals.com — dental clinic",
+    caption: "Live client",
+    project: "Dental clinic platform",
+    alt: "Ocean Smile Dental Clinic website built by Royal Robert Digital Solutions",
   },
   {
     lead: "E-commerce platforms that",
     typed: "sell securely, 24 hours a day",
+    image: onlineStore,
+    site: "online store — secure checkout",
+    caption: "E-commerce",
+    project: "Online store build",
+    alt: "Online store web design with secure payments and SEO growth",
   },
   {
     lead: "Business software that",
     typed: "runs your operations without the chaos",
+    image: dealership,
+    site: "royalautos.co.ke — dealership build",
+    caption: "Live project",
+    project: "Dealership platform",
+    alt: "Luxury car dealership website landing page designed by Royal Robert Digital Solutions",
   },
 ];
 
