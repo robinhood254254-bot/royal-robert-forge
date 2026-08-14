@@ -3,29 +3,52 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Sparkles, Timer, Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import { BrowserFrame } from "./Frames";
+import { MonitorFrame } from "./Frames";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { waLink } from "@/lib/site";
 import innovation from "@/assets/innovation_technology_and_SEO.webp";
 import dealership from "@/assets/landing_page_for_a_car_website.webp";
+import mombasaHearing from "@/assets/mombasahearing.com.webp";
+import oceansmiles from "@/assets/oceansmiles.webp";
+import onlineStore from "@/assets/online-store.webp";
 import mobileResponsive from "@/assets/Mockup_mobile_responsiveness.webp";
 
 const headlines = [
   {
     lead: "We listen carefully,",
     typed: "then build what your business actually needs",
+    image: mombasaHearing,
+    site: "mombasahearing.com — Mombasa Hearing Centre",
+    caption: "Live client",
+    project: "Specialist hearing care",
+    alt: "Mombasa Hearing Centre website built by Royal Robert Digital Solutions",
   },
   {
     lead: "Websites engineered to",
     typed: "turn visitors into paying customers",
+    image: oceansmiles,
+    site: "oceansmilesdentals.com — dental clinic",
+    caption: "Live client",
+    project: "Dental clinic platform",
+    alt: "Ocean Smile Dental Clinic website built by Royal Robert Digital Solutions",
   },
   {
     lead: "E-commerce platforms that",
     typed: "sell securely, 24 hours a day",
+    image: onlineStore,
+    site: "online store — secure checkout",
+    caption: "E-commerce",
+    project: "Online store build",
+    alt: "Online store web design with secure payments and SEO growth",
   },
   {
     lead: "Business software that",
     typed: "runs your operations without the chaos",
+    image: dealership,
+    site: "royalautos.co.ke — dealership build",
+    caption: "Live project",
+    project: "Dealership platform",
+    alt: "Luxury car dealership website landing page designed by Royal Robert Digital Solutions",
   },
 ];
 
@@ -199,27 +222,46 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200} className="relative">
+        <Reveal delay={200} className="relative lg:sticky lg:top-28 lg:self-start">
           <div className="relative mx-auto max-w-xl">
-            <BrowserFrame label="royalautos.co.ke — dealership build">
-              <img
-                src={dealership}
-                alt="Luxury car dealership website landing page designed by Royal Robert Digital Solutions"
-                loading="eager"
-                className="aspect-[16/10] w-full object-cover"
-              />
-            </BrowserFrame>
-            <div className="absolute -bottom-10 -left-4 w-28 sm:-left-10 sm:w-36">
+            <MonitorFrame label={current.site}>
+              <div className="relative aspect-[16/10] w-full overflow-hidden">
+                {headlines.map((h, i) => (
+                  <img
+                    key={h.site}
+                    src={h.image}
+                    alt={h.alt}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    className={`absolute inset-0 size-full object-cover object-top transition-all duration-700 ease-[var(--ease-out-soft)] ${
+                      i === index ? "scale-100 opacity-100" : "scale-[1.03] opacity-0"
+                    }`}
+                  />
+                ))}
+              </div>
+            </MonitorFrame>
+            <div className="absolute -bottom-6 -left-4 w-24 sm:-bottom-8 sm:-left-10 sm:w-32">
               <img
                 src={mobileResponsive}
-                alt="Mobile view of a responsive vehicle platform"
+                alt="Mobile view of a responsive website build"
                 loading="lazy"
                 className="w-full rounded-2xl border border-border shadow-[var(--shadow-elegant)]"
               />
             </div>
             <div className="absolute -right-2 top-6 hidden rounded-xl border border-primary/20 bg-card/95 px-4 py-3 backdrop-blur sm:block">
-              <p className="eyebrow">Live project</p>
-              <p className="mt-1 font-display text-sm font-semibold">Dealership platform</p>
+              <p className="eyebrow">{current.caption}</p>
+              <p className="mt-1 font-display text-sm font-semibold">{current.project}</p>
+            </div>
+            <div className="mt-5 flex justify-center gap-1.5">
+              {headlines.map((h, i) => (
+                <button
+                  key={h.site}
+                  aria-label={`Show project ${i + 1}`}
+                  onClick={() => setIndex(i)}
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === index ? "w-7 bg-primary" : "w-3 bg-primary/25"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </Reveal>

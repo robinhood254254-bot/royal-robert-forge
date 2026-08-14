@@ -4,6 +4,7 @@ import { Reveal } from "./Reveal";
 import { BrowserFrame, PhoneFrame } from "./Frames";
 import { cn } from "@/lib/utils";
 import dentals from "@/assets/lebanondentals.com.webp";
+import mombasaHearing from "@/assets/mombasahearing.com.webp";
 import oceansmiles from "@/assets/oceansmiles.webp";
 import appMockups from "@/assets/portfolio-mockups.webp";
 import dealership from "@/assets/landing_page_for_a_car_website.webp";
@@ -13,6 +14,23 @@ import responsive from "@/assets/mobile_responsiveness.webp";
 import mobileMock from "@/assets/Mockup_mobile_responsiveness.webp";
 
 const projects = [
+  {
+    id: "mombasa-hearing",
+    label: "Mombasa Hearing Centre",
+    tag: "Satisfied client",
+    url: "mombasahearing.com",
+    image: mombasaHearing,
+    alt: "Mombasa Hearing Centre website designed by Royal Robert Digital Solutions",
+    summary:
+      "A specialist hearing-care website for Mombasa Hearing Centre — 23+ years of audiology practice presented with clear appointment booking and patient education.",
+    details: [
+      "Appointment booking and hearing-test conversion paths",
+      "Structured services, hearing aids and education mega menus",
+      "Bilingual, patient-friendly messaging (English & Kiswahili)",
+      "Accessibility widget, WhatsApp chat and top contact bar",
+    ],
+    link: "https://www.mombasahearing.com/",
+  },
   {
     id: "oceansmiles",
     label: "Ocean Smile Dental Clinic",
