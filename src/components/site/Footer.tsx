@@ -28,6 +28,7 @@ export function Footer() {
               { to: "/pricing", label: "Pricing" },
               { to: "/blog", label: "Insights & Blog" },
               { to: "/contact", label: "Contact & Consultation" },
+              { to: "/privacy", label: "Privacy Policy" },
             ].map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="transition-colors hover:text-primary">
