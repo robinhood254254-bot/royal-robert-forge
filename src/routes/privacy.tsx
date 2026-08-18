@@ -91,6 +91,8 @@ function PrivacyPage() {
           <PolicySection title="3. How we use your information">
             <p>We use the information we collect to:</p>
             <ul className="list-disc space-y-2 pl-5">
+              <li>Listen carefully to your business goals, challenges, and the outcomes you are willing to invest in to scale.</li>
+              <li>Analyse your requirements and craft a clear, end-to-end blueprint for scaling your business from A to Z.</li>
               <li>Respond to your inquiries and provide project quotations.</li>
               <li>Deliver the websites, e-commerce platforms, web applications, and business software you request.</li>
               <li>Communicate with you one-on-one throughout the project lifecycle.</li>
@@ -105,7 +107,31 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="4. Legal basis for processing">
+          <PolicySection title="4. Consultation deposits & refunds">
+            <p>
+              Strategic business scaling information — including detailed
+              blueprints, growth roadmaps, and tailored implementation plans —
+              is shared only after we have agreed the scope and quotation with
+              you and a deposit has been paid. This deposit is our mutual
+              assurance that we are locking arms and committing to move your
+              business forward together.
+            </p>
+            <p>
+              The deposit amount and payment terms are agreed in writing before
+              any strategic information is released. All deposits are processed
+              through proper, traceable channels for legal and record-keeping
+              purposes.
+            </p>
+            <p>
+              If, after reviewing the blueprint or strategic information
+              provided, you feel it does not make sense for your business, you
+              may request a full refund of the deposit. We will honour that
+              request promptly and refund one hundred percent (100%) of the
+              deposit paid, no questions asked.
+            </p>
+          </PolicySection>
+
+          <PolicySection title="5. Legal basis for processing">
             <p>
               We process personal information on the basis of your consent,
               the performance of a contract, our legitimate business
