@@ -142,7 +142,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="5. How we share your information">
+          <PolicySection title="6. How we share your information">
             <p>
               We keep your information confidential. We only share it when
               necessary and with trusted parties, including:
@@ -166,7 +166,7 @@ function PrivacyPage() {
             </ul>
           </PolicySection>
 
-          <PolicySection title="6. Data security">
+          <PolicySection title="7. Data security">
             <p>
               We take reasonable technical and organisational measures to protect
               your information from unauthorised access, loss, misuse, or
@@ -177,7 +177,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="7. Data retention">
+          <PolicySection title="8. Data retention">
             <p>
               We retain your personal information only for as long as
               necessary to fulfil the purposes described in this policy,
@@ -187,7 +187,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="8. Your rights">
+          <PolicySection title="9. Your rights">
             <p>You have the right to:</p>
             <ul className="list-disc space-y-2 pl-5">
               <li>Access the personal information we hold about you.</li>
@@ -203,7 +203,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="9. Cookies and analytics">
+          <PolicySection title="10. Cookies and analytics">
             <p>
               Our website may use cookies and similar technologies to improve
               performance, analyse traffic, and understand user behaviour. You
@@ -212,7 +212,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="10. Links to third-party websites">
+          <PolicySection title="11. Links to third-party websites">
             <p>
               Our website may contain links to external sites. We are not
               responsible for the privacy practices or content of those sites.
@@ -221,7 +221,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="11. Changes to this policy">
+          <PolicySection title="12. Changes to this policy">
             <p>
               We may update this Privacy Policy from time to time. The updated
               version will be posted on this page with a revised “Last updated”
@@ -230,7 +230,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="12. Contact us">
+          <PolicySection title="13. Contact us">
             <p>
               If you have any questions, concerns, or requests about this
               Privacy Policy or how we handle your information, please contact
