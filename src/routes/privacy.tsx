@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SITE_URL, EMAIL, WHATSAPP_NUMBER, SECONDARY_NUMBER } from "@/lib/site";
 import { PageIntro } from "@/components/site/PageIntro";
 import { Reveal } from "@/components/site/Reveal";
-import mpesaTill from "@/assets/lipa-na-mpesa-till.png.asset.json";
+import mpesaTill from "@/assets/lipa-na-mpesa-till.webp";
 
 const title = "Privacy Policy | Royal Robert Digital Solutions";
 const description =
@@ -78,7 +78,7 @@ function PrivacyPage() {
 
             <div className="my-6 overflow-hidden rounded-xl border border-border bg-white shadow-[var(--shadow-elegant)]">
               <img
-                src={mpesaTill.url}
+                src={mpesaTill}
                 alt="Lipa na M-PESA Buy Goods Till number 3321749 registered to Robert Gichangi Wambui"
                 className="w-full"
                 loading="lazy"
