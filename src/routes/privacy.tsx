@@ -78,7 +78,7 @@ function PrivacyPage() {
 
             <div className="my-6 overflow-hidden rounded-xl border border-border bg-white shadow-[var(--shadow-elegant)]">
               <img
-                src={mpesaTill.url}
+                src={mpesaTill}
                 alt="Lipa na M-PESA Buy Goods Till number 3321749 registered to Robert Gichangi Wambui"
                 className="w-full"
                 loading="lazy"
