@@ -38,7 +38,7 @@ function PrivacyPage() {
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:py-20">
         <Reveal>
           <p className="text-sm text-muted-foreground">
-            Last updated: 17 August 2026
+            Last updated: 18 August 2026
           </p>
         </Reveal>
 
@@ -91,6 +91,8 @@ function PrivacyPage() {
           <PolicySection title="3. How we use your information">
             <p>We use the information we collect to:</p>
             <ul className="list-disc space-y-2 pl-5">
+              <li>Listen carefully to your business goals, challenges, and the outcomes you are willing to invest in to scale.</li>
+              <li>Analyse your requirements and craft a clear, end-to-end blueprint for scaling your business from A to Z.</li>
               <li>Respond to your inquiries and provide project quotations.</li>
               <li>Deliver the websites, e-commerce platforms, web applications, and business software you request.</li>
               <li>Communicate with you one-on-one throughout the project lifecycle.</li>
@@ -105,7 +107,31 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="4. Legal basis for processing">
+          <PolicySection title="4. Consultation deposits & refunds">
+            <p>
+              Strategic business scaling information — including detailed
+              blueprints, growth roadmaps, and tailored implementation plans —
+              is shared only after we have agreed the scope and quotation with
+              you and a deposit has been paid. This deposit is our mutual
+              assurance that we are locking arms and committing to move your
+              business forward together.
+            </p>
+            <p>
+              The deposit amount and payment terms are agreed in writing before
+              any strategic information is released. All deposits are processed
+              through proper, traceable channels for legal and record-keeping
+              purposes.
+            </p>
+            <p>
+              If, after reviewing the blueprint or strategic information
+              provided, you feel it does not make sense for your business, you
+              may request a full refund of the deposit. We will honour that
+              request promptly and refund one hundred percent (100%) of the
+              deposit paid, no questions asked.
+            </p>
+          </PolicySection>
+
+          <PolicySection title="5. Legal basis for processing">
             <p>
               We process personal information on the basis of your consent,
               the performance of a contract, our legitimate business
@@ -116,7 +142,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="5. How we share your information">
+          <PolicySection title="6. How we share your information">
             <p>
               We keep your information confidential. We only share it when
               necessary and with trusted parties, including:
@@ -140,7 +166,7 @@ function PrivacyPage() {
             </ul>
           </PolicySection>
 
-          <PolicySection title="6. Data security">
+          <PolicySection title="7. Data security">
             <p>
               We take reasonable technical and organisational measures to protect
               your information from unauthorised access, loss, misuse, or
@@ -151,7 +177,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="7. Data retention">
+          <PolicySection title="8. Data retention">
             <p>
               We retain your personal information only for as long as
               necessary to fulfil the purposes described in this policy,
@@ -161,7 +187,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="8. Your rights">
+          <PolicySection title="9. Your rights">
             <p>You have the right to:</p>
             <ul className="list-disc space-y-2 pl-5">
               <li>Access the personal information we hold about you.</li>
@@ -177,7 +203,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="9. Cookies and analytics">
+          <PolicySection title="10. Cookies and analytics">
             <p>
               Our website may use cookies and similar technologies to improve
               performance, analyse traffic, and understand user behaviour. You
@@ -186,7 +212,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="10. Links to third-party websites">
+          <PolicySection title="11. Links to third-party websites">
             <p>
               Our website may contain links to external sites. We are not
               responsible for the privacy practices or content of those sites.
@@ -195,7 +221,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="11. Changes to this policy">
+          <PolicySection title="12. Changes to this policy">
             <p>
               We may update this Privacy Policy from time to time. The updated
               version will be posted on this page with a revised “Last updated”
@@ -204,7 +230,7 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="12. Contact us">
+          <PolicySection title="13. Contact us">
             <p>
               If you have any questions, concerns, or requests about this
               Privacy Policy or how we handle your information, please contact
