@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SITE_URL, EMAIL, WHATSAPP_NUMBER, SECONDARY_NUMBER } from "@/lib/site";
 import { PageIntro } from "@/components/site/PageIntro";
 import { Reveal } from "@/components/site/Reveal";
+import mpesaTill from "@/assets/lipa-na-mpesa-till.png.asset.json";
 
 const title = "Privacy Policy | Royal Robert Digital Solutions";
 const description =
@@ -59,7 +60,65 @@ function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="2. Information we collect">
+          <PolicySection title="2. Consultation deposits & payment process">
+            <p>
+              We begin every relationship by listening carefully to your business
+              goals, the challenges you face, and the outcomes you are willing to
+              invest in to scale. We then analyse your situation and prepare a
+              clear, end-to-end blueprint showing exactly how your business can
+              grow from where it is today to the next level.
+            </p>
+            <p>
+              Because this strategic information is valuable and actionable, we
+              share the full blueprint only after we have agreed the scope and
+              quotation with you and a deposit has been paid. The deposit is our
+              mutual assurance that we are locking arms and committing to move
+              your business forward together.
+            </p>
+
+            <div className="my-6 overflow-hidden rounded-xl border border-border bg-white shadow-[var(--shadow-elegant)]">
+              <img
+                src={mpesaTill.url}
+                alt="Lipa na M-PESA Buy Goods Till number 3321749 registered to Robert Gichangi Wambui"
+                className="w-full"
+                loading="lazy"
+              />
+              <div className="bg-secondary/60 px-4 py-3 text-center text-sm text-muted-foreground">
+                Buy Goods Till Number: <strong className="text-foreground">3321749</strong> — Robert Gichangi Wambui
+              </div>
+            </div>
+
+            <p>How to make your deposit:</p>
+            <ol className="list-decimal space-y-2 pl-5">
+              <li>Open your SIM toolkit or M-PESA menu on your phone.</li>
+              <li>Select <strong>Lipa na M-PESA</strong>.</li>
+              <li>Choose <strong>Buy Goods</strong>.</li>
+              <li>Enter the Till Number <strong>3321749</strong>.</li>
+              <li>Enter the deposit amount we agreed in writing.</li>
+              <li>Confirm the payment with your M-PESA PIN.</li>
+            </ol>
+            <p>
+              Once the deposit is confirmed, we release the full scaling
+              blueprint and strategic documents to you immediately. The legal and
+              project continuation — building your brand, website, software, or
+              any other agreed solution — then proceeds without delay.
+            </p>
+            <p>
+              The deposit amount and payment terms are agreed in writing before
+              any strategic information is released. All deposits are processed
+              through proper, traceable channels for legal and record-keeping
+              purposes.
+            </p>
+            <p>
+              If, after reviewing the blueprint or strategic information
+              provided, you feel it does not make sense for your business, you
+              may request a full refund of the deposit. We will honour that
+              request promptly and refund one hundred percent (100%) of the
+              deposit paid, no questions asked.
+            </p>
+          </PolicySection>
+
+          <PolicySection title="3. Information we collect">
             <p>We may collect the following types of information:</p>
             <ul className="list-disc space-y-2 pl-5">
               <li>
@@ -88,7 +147,7 @@ function PrivacyPage() {
             </ul>
           </PolicySection>
 
-          <PolicySection title="3. How we use your information">
+          <PolicySection title="4. How we use your information">
             <p>We use the information we collect to:</p>
             <ul className="list-disc space-y-2 pl-5">
               <li>Listen carefully to your business goals, challenges, and the outcomes you are willing to invest in to scale.</li>
@@ -104,30 +163,6 @@ function PrivacyPage() {
             <p>
               We will not sell, rent, or trade your personal information to
               third parties for marketing purposes.
-            </p>
-          </PolicySection>
-
-          <PolicySection title="4. Consultation deposits & refunds">
-            <p>
-              Strategic business scaling information — including detailed
-              blueprints, growth roadmaps, and tailored implementation plans —
-              is shared only after we have agreed the scope and quotation with
-              you and a deposit has been paid. This deposit is our mutual
-              assurance that we are locking arms and committing to move your
-              business forward together.
-            </p>
-            <p>
-              The deposit amount and payment terms are agreed in writing before
-              any strategic information is released. All deposits are processed
-              through proper, traceable channels for legal and record-keeping
-              purposes.
-            </p>
-            <p>
-              If, after reviewing the blueprint or strategic information
-              provided, you feel it does not make sense for your business, you
-              may request a full refund of the deposit. We will honour that
-              request promptly and refund one hundred percent (100%) of the
-              deposit paid, no questions asked.
             </p>
           </PolicySection>
 
