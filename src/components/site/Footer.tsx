@@ -1,8 +1,23 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail } from "lucide-react";
-import { WHATSAPP_LINK, WHATSAPP_NUMBER, SECONDARY_NUMBER, SECONDARY_TEL, EMAIL } from "@/lib/site";
+import {
+  WHATSAPP_LINK,
+  WHATSAPP_NUMBER,
+  SECONDARY_NUMBER,
+  SECONDARY_TEL,
+  EMAIL,
+  SOCIAL_LINKS,
+} from "@/lib/site";
 import { Logo } from "./Header";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { FacebookIcon, TikTokIcon, LinkedInIcon, InstagramIcon } from "./SocialIcons";
+
+const socials = [
+  { href: SOCIAL_LINKS.facebook, label: "Facebook", Icon: FacebookIcon },
+  { href: SOCIAL_LINKS.tiktok, label: "TikTok", Icon: TikTokIcon },
+  { href: SOCIAL_LINKS.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
+  { href: SOCIAL_LINKS.instagram, label: "Instagram", Icon: InstagramIcon },
+];
 
 export function Footer() {
   return (
@@ -15,6 +30,20 @@ export function Footer() {
             web applications and business software — with direct, one-on-one communication from
             first conversation to launch.
           </p>
+          <div className="mt-5 flex items-center gap-2">
+            {socials.map(({ href, label, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Follow Royal Robert Digital Solutions on ${label}`}
+                className="grid size-10 place-items-center rounded-full border border-border bg-background text-muted-foreground transition-all hover:scale-105 hover:border-primary/30 hover:text-primary hover:shadow-sm"
+              >
+                <Icon className="size-[18px]" />
+              </a>
+            ))}
+          </div>
         </div>
 
 

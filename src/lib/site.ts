@@ -5,6 +5,13 @@ export const SECONDARY_TEL = "tel:+254792645485";
 export const EMAIL = "info@royalrobert.co.ke";
 export const SITE_URL = "https://royal-robert-forge.lovable.app";
 
+export const SOCIAL_LINKS = {
+  facebook: "https://www.facebook.com/royalrobertdigitals/",
+  tiktok: "https://www.tiktok.com/@royalrobertdigital",
+  linkedin: "https://www.linkedin.com/in/robert-gichangi-53b064335",
+  instagram: "https://www.instagram.com/royalrobert.co.ke",
+} as const;
+
 export function waLink(message: string) {
   return `${WHATSAPP_LINK}?text=${encodeURIComponent(message)}`;
 }

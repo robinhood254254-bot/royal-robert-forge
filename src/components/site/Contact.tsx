@@ -13,8 +13,10 @@ import {
   SECONDARY_NUMBER,
   SECONDARY_TEL,
   EMAIL,
+  SOCIAL_LINKS,
   waLink,
 } from "@/lib/site";
+import { FacebookIcon, TikTokIcon, LinkedInIcon, InstagramIcon } from "./SocialIcons";
 
 const schema = z.object({
   fullName: z.string().trim().min(2, "Please enter your full name").max(100),
@@ -181,7 +183,21 @@ export function Contact() {
                 <p className="mt-3 break-all font-display text-sm font-semibold text-primary">{EMAIL}</p>
               </a>
             </Reveal>
-            <Reveal delay={240}>
+            <Reveal delay={220}>
+              <div className="rounded-2xl border border-border bg-surface/70 p-6">
+                <h3 className="font-display text-base font-semibold">Follow us</h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Stay updated with projects, tips and behind-the-scenes work.
+                </p>
+                <div className="mt-4 flex flex-wrap items-center gap-2.5">
+                  <SocialLink href={SOCIAL_LINKS.facebook} label="Facebook" Icon={FacebookIcon} />
+                  <SocialLink href={SOCIAL_LINKS.tiktok} label="TikTok" Icon={TikTokIcon} />
+                  <SocialLink href={SOCIAL_LINKS.linkedin} label="LinkedIn" Icon={LinkedInIcon} />
+                  <SocialLink href={SOCIAL_LINKS.instagram} label="Instagram" Icon={InstagramIcon} />
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={260}>
               <div className="rounded-2xl border border-dashed border-primary/30 bg-surface/50 p-6">
                 <Info className="size-5 text-primary" />
                 <h3 className="mt-3 font-display text-base font-semibold">Before you submit</h3>
@@ -408,5 +424,28 @@ function Field({
         </p>
       )}
     </div>
+  );
+}
+
+function SocialLink({
+  href,
+  label,
+  Icon,
+}: {
+  href: string;
+  label: string;
+  Icon: React.ComponentType<{ className?: string }>;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Follow Royal Robert Digital Solutions on ${label}`}
+      className="flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-medium text-muted-foreground transition-all hover:border-primary/30 hover:text-primary"
+    >
+      <Icon className="size-4" />
+      {label}
+    </a>
   );
 }
