@@ -141,7 +141,7 @@ function DocumentsList() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <Button asChild variant="outline" size="sm">
-                    <Link to="/admin/new" search={{ id: doc.id }}>
+                    <Link to="/admin/new" search={doc.id ? { id: doc.id } : {}}>
                       <Pencil className="size-4" /> Edit
                     </Link>
                   </Button>
