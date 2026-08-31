@@ -257,12 +257,12 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
   }
 
   // Signatures
-  ensure(146);
-  y += 12;
+  ensure(128);
+  y += 10;
   doc.setDrawColor(215, 222, 230);
   doc.setLineWidth(1);
   doc.line(MARGIN, y, PAGE_W - MARGIN, y);
-  y += 26;
+  y += 20;
 
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10);
@@ -277,23 +277,23 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
   doc.setTextColor(...NAVY);
   doc.text(AUTHORIZED_BY, MARGIN, y + 51);
 
-  const sigY = y + 86;
+  const sigY = y + 72;
   const colW = (width - 40) / 2;
   doc.setDrawColor(...NAVY);
   doc.setLineWidth(0.8);
   doc.line(MARGIN, sigY, MARGIN + colW, sigY);
   doc.setFontSize(9);
   doc.setTextColor(...SLATE);
-  doc.text("Signature — Royal Robert Digital Solutions", MARGIN, sigY + 13);
-  doc.text(`Date: ______________`, MARGIN, sigY + 28);
+  doc.text("Signature — Royal Robert Digital Solutions", MARGIN, sigY + 12);
+  doc.text(`Date: ______________`, MARGIN, sigY + 25);
 
   if (model.signatures === "both") {
     const x2 = MARGIN + colW + 40;
     doc.setDrawColor(...NAVY);
     doc.line(x2, sigY, x2 + colW, sigY);
     doc.setTextColor(...SLATE);
-    doc.text(`Signature — ${data.client_name || "Client"}`, x2, sigY + 13);
-    doc.text(`Date: ______________`, x2, sigY + 28);
+    doc.text(`Signature — ${data.client_name || "Client"}`, x2, sigY + 12);
+    doc.text(`Date: ______________`, x2, sigY + 25);
   }
 
   // Footer note on every page
