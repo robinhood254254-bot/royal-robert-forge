@@ -13,8 +13,10 @@ import {
   SECONDARY_NUMBER,
   SECONDARY_TEL,
   EMAIL,
+  SOCIAL_LINKS,
   waLink,
 } from "@/lib/site";
+import { FacebookIcon, TikTokIcon, LinkedInIcon, InstagramIcon } from "./SocialIcons";
 
 const schema = z.object({
   fullName: z.string().trim().min(2, "Please enter your full name").max(100),
