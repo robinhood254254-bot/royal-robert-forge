@@ -257,7 +257,12 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
   }
 
   // Signatures
-  ensure(128);
+  if (y + 127 > PAGE_H - 100) {
+    doc.addPage();
+    page += 1;
+    drawChrome(doc, mark);
+    y = CONTENT_TOP;
+  }
   y += 10;
   doc.setDrawColor(215, 222, 230);
   doc.setLineWidth(1);
