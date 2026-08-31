@@ -13,7 +13,7 @@ const PAGE_W = 595.28;
 const PAGE_H = 841.89;
 const MARGIN = 56;
 const CONTENT_TOP = 212;
-const CONTENT_BOTTOM = PAGE_H - 120;
+const CONTENT_BOTTOM = PAGE_H - 112;
 
 const NAVY: [number, number, number] = [18, 42, 71];
 const SLATE: [number, number, number] = [95, 106, 122];
@@ -157,7 +157,7 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
     doc.setFontSize(size);
     doc.setTextColor(...(opts.color ?? NAVY));
     const lines = doc.splitTextToSize(text, width - indent) as string[];
-    const lh = size * 1.45;
+    const lh = size * 1.38;
     lines.forEach((line) => {
       ensure(lh);
       doc.text(line, MARGIN + indent, y);
@@ -201,8 +201,13 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
 
   for (const section of model.sections) {
     if (section.heading) {
-      ensure(28);
-      y += 4;
+      const first = section.rows?.length
+        ? 22 * Math.min(section.rows.length, 2)
+        : section.bullets?.length
+          ? 34
+          : 34;
+      ensure(20 + first);
+      y += 3;
       doc.setFont("helvetica", "bold");
       doc.setFontSize(11);
       doc.setTextColor(...TEAL);
@@ -216,7 +221,7 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
       doc.setFontSize(size);
       doc.setTextColor(...NAVY);
       const lines = doc.splitTextToSize(b, width - 18) as string[];
-      const lh = size * 1.45;
+      const lh = size * 1.38;
       lines.forEach((line, i) => {
         ensure(lh);
         if (i === 0) {
@@ -227,7 +232,7 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
         doc.text(line, MARGIN + 18, y);
         y += lh;
       });
-      y += 3;
+      y += 2;
     });
     if (section.rows?.length) {
       const rowH = 22;
@@ -247,13 +252,13 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
         doc.text(value, PAGE_W - MARGIN - 10, y, { align: "right" });
         y += rowH;
       });
-      y += 10;
+      y += 8;
     }
   }
 
   // Signatures
-  ensure(150);
-  y += 14;
+  ensure(146);
+  y += 12;
   doc.setDrawColor(215, 222, 230);
   doc.setLineWidth(1);
   doc.line(MARGIN, y, PAGE_W - MARGIN, y);
