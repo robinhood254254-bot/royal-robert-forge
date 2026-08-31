@@ -12,7 +12,7 @@ import {
 const PAGE_W = 595.28;
 const PAGE_H = 841.89;
 const MARGIN = 56;
-const CONTENT_TOP = 212;
+const CONTENT_TOP = 204;
 const CONTENT_BOTTOM = PAGE_H - 112;
 
 const NAVY: [number, number, number] = [18, 42, 71];
@@ -257,7 +257,7 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
   }
 
   // Signatures
-  if (y + 127 > PAGE_H - 100) {
+  if (y + 127 > PAGE_H - 96) {
     doc.addPage();
     page += 1;
     drawChrome(doc, mark);
