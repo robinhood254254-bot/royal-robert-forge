@@ -426,3 +426,26 @@ function Field({
     </div>
   );
 }
+
+function SocialLink({
+  href,
+  label,
+  Icon,
+}: {
+  href: string;
+  label: string;
+  Icon: React.ComponentType<{ className?: string }>;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Follow Royal Robert Digital Solutions on ${label}`}
+      className="flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-medium text-muted-foreground transition-all hover:border-primary/30 hover:text-primary"
+    >
+      <Icon className="size-4" />
+      {label}
+    </a>
+  );
+}
