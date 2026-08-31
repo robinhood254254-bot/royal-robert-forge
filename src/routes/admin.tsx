@@ -55,7 +55,7 @@ function AdminLayout() {
               </Link>
             </Button>
             <Button asChild size="sm">
-              <Link to="/admin/new">
+              <Link to="/admin/new" search={{}}>
                 <Plus className="size-4" /> New document
               </Link>
             </Button>

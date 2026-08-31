@@ -33,9 +33,8 @@ import {
 } from "@/lib/documents";
 
 export const Route = createFileRoute("/admin/new")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    id: typeof search['id'] === "string" ? (search['id'] as string) : undefined,
-  }),
+  validateSearch: (search: Record<string, unknown>): { id?: string } =>
+    typeof search['id'] === "string" ? { id: search['id'] as string } : {},
   component: DocumentEditor,
 });
 
@@ -239,7 +238,7 @@ function DocumentEditor() {
         <Section title="Client">
           {clients?.length ? (
             <Field label="Load a saved client">
-              <Select value={doc.client_id ?? undefined} onValueChange={pickClient}>
+              <Select value={doc.client_id ?? ""} onValueChange={pickClient}>
                 <SelectTrigger><SelectValue placeholder="Select client" /></SelectTrigger>
                 <SelectContent>
                   {clients.map((c) => (

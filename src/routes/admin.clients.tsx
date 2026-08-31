@@ -42,7 +42,10 @@ function ClientsPage() {
   });
 
   const save = async () => {
-    if (!form.name.trim()) return toast.error("Client name is required");
+    if (!form.name.trim()) {
+      toast.error("Client name is required");
+      return;
+    }
     setSaving(true);
     try {
       const { data: userData } = await supabase.auth.getUser();
@@ -70,7 +73,10 @@ function ClientsPage() {
   const remove = async (id?: string) => {
     if (!id || !window.confirm("Delete this client?")) return;
     const { error } = await db.from("clients").delete().eq("id", id);
-    if (error) return toast.error(error.message);
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
     queryClient.invalidateQueries({ queryKey: ["clients"] });
     toast.success("Client deleted");
   };

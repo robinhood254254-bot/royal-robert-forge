@@ -58,7 +58,7 @@ export const DOC_TYPES: {
 ];
 
 export function docTypeMeta(t: DocType) {
-  return DOC_TYPES.find((d) => d.value === t) ?? DOC_TYPES[0];
+  return (DOC_TYPES.find((d) => d.value === t) ?? DOC_TYPES[0])!;
 }
 
 export interface Payment {

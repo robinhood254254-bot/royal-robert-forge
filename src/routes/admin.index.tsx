@@ -54,7 +54,10 @@ function DocumentsList() {
   const remove = async (id: string) => {
     if (!window.confirm("Delete this document permanently?")) return;
     const { error } = await db.from("documents").delete().eq("id", id);
-    if (error) return toast.error(error.message);
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
     toast.success("Document deleted");
     queryClient.invalidateQueries({ queryKey: ["documents"] });
   };
@@ -103,7 +106,7 @@ function DocumentsList() {
           <FileText className="mx-auto size-8 text-muted-foreground" />
           <p className="mt-3 text-sm text-muted-foreground">No documents yet.</p>
           <Button asChild className="mt-4">
-            <Link to="/admin/new">Create your first document</Link>
+            <Link to="/admin/new" search={{}}>Create your first document</Link>
           </Button>
         </div>
       ) : (
