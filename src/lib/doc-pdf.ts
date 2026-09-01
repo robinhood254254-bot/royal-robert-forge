@@ -206,6 +206,7 @@ export async function buildPdf(data: DocData): Promise<jsPDF> {
         : section.bullets?.length
           ? 34
           : 34;
+      console.log("HEAD", section.heading, y, CONTENT_BOTTOM);
       ensure(36 + first);
       y += 3;
       doc.setFont("helvetica", "bold");
