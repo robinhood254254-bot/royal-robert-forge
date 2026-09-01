@@ -51,7 +51,7 @@ function AuthPage() {
           options: { emailRedirectTo: `${window.location.origin}/admin` },
         });
         if (error) throw error;
-        toast.success("Account created. You can sign in now.");
+        toast.success("Account created. Check your email for the confirmation link, then sign in.");
         setMode("signin");
       }
     } catch (err) {
