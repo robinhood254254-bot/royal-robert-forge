@@ -1,10 +1,10 @@
 import { Reveal } from "./Reveal";
 
 const steps = [
-  { t: "Submit an inquiry", d: "Share your goals, project type, timeline and budget range." },
+  { t: "Submit an inquiry", d: "Share your goals, project type and preferred timeline." },
   { t: "One-on-one discussion", d: "We talk directly on WhatsApp or a call — no sales scripts." },
   { t: "Requirements analysis", d: "I map features, pages, integrations and content needs." },
-  { t: "Custom proposal & quotation", d: "A written scope with a clear, itemised price." },
+  { t: "Custom proposal & quotation", d: "A written scope with clear deliverables and terms." },
   { t: "Agreement", d: "We confirm scope, timeline and deliverables in writing." },
   { t: "Deposit confirmation", d: "Only after the scope and quotation are agreed — never before." },
   { t: "Development begins", d: "Build, review checkpoints, testing, launch and handover." },

@@ -6,12 +6,12 @@ import { Services } from "@/components/site/Services";
 import { Portfolio } from "@/components/site/Portfolio";
 import { FutureLab } from "@/components/site/FutureLab";
 import { Process } from "@/components/site/Process";
-import { Pricing } from "@/components/site/Pricing";
+import { CampaignShowcase } from "@/components/site/CampaignShowcase";
 import { Contact } from "@/components/site/Contact";
 
 const title = "Websites & Business Software in Kenya | Royal Robert";
 const description =
-  "Premium websites, e-commerce platforms, custom web apps and Google Business Profile services built one-on-one. Projects from KSh 19,999. Chat on WhatsApp.";
+  "Professional websites, e-commerce platforms, custom web apps and digital visibility solutions for ambitious Kenyan businesses.";
 
 const url = `${SITE_URL}`;
 
@@ -39,7 +39,6 @@ export const Route = createFileRoute("/")({
           description,
           areaServed: "Kenya",
           telephone: "+254710837083",
-          priceRange: "KSh 19,999+",
         }),
       },
     ],
@@ -53,10 +52,10 @@ function Index() {
       <Hero />
       <About />
       <Services compact />
+      <CampaignShowcase />
       <Portfolio />
       <FutureLab />
       <Process />
-      <Pricing />
       <Contact />
     </>
   );

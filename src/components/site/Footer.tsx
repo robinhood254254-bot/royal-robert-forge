@@ -26,9 +26,8 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            One dedicated professional building corporate websites, e-commerce platforms, custom
-            web applications and business software — with direct, one-on-one communication from
-            first conversation to launch.
+            Professional websites, e-commerce platforms, custom web applications and business
+            software designed to make ambitious businesses visible, credible and ready to grow.
           </p>
           <div className="mt-5 flex items-center gap-2">
             {socials.map(({ href, label, Icon }) => (
@@ -54,7 +53,6 @@ export function Footer() {
               { to: "/", label: "Home" },
               { to: "/services", label: "Services" },
               { to: "/portfolio", label: "Portfolio" },
-              { to: "/pricing", label: "Pricing" },
               { to: "/blog", label: "Insights & Blog" },
               { to: "/contact", label: "Contact & Consultation" },
               { to: "/privacy", label: "Privacy Policy" },

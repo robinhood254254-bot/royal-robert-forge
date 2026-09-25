@@ -73,7 +73,7 @@ export function FutureLab() {
           {[
             {
               t: "Inventory management",
-              d: "Vehicle records, availability states, pricing history and photo libraries.",
+              d: "Vehicle records, availability states, stock history and photo libraries.",
             },
             {
               t: "Hire-purchase tracking",
