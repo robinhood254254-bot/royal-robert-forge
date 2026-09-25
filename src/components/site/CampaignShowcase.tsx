@@ -45,7 +45,7 @@ export function CampaignShowcase() {
             <Reveal
               key={campaign.title}
               delay={(index % 3) * 70}
-              className={campaign.wide ? "lg:col-span-2" : undefined}
+              className={campaign.wide ? "lg:col-span-2" : ""}
             >
               <article className="group relative h-full overflow-hidden border border-border bg-navy-deep">
                 <img

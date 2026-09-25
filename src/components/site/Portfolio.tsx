@@ -75,7 +75,7 @@ const projects = [
     summary:
       "Premium dealership landing experience with vehicle search, filtering and a live inventory dashboard preview.",
     details: [
-      "Make / model / price / year search built into the hero",
+      "Make, model and year search built into the opening view",
       "Inventory dashboard preview with availability states",
       "Finance, services and contact journeys",
       "Designed for high-value vehicle enquiries",

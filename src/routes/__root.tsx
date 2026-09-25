@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Royal Robert Digital Solutions" },
       { name: "twitter:title", content: "Royal Robert Digital Solutions" },
       { property: "og:description", content: "Professional websites, e-commerce platforms and business software for ambitious Kenyan businesses." },
-      { name: "twitter:description", content: "Premium websites, e-commerce platforms and business software built one-on-one for Kenyan businesses." },
+      { name: "twitter:description", content: "Professional websites, e-commerce platforms and business software for ambitious Kenyan businesses." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dbb85942-f650-4004-bfc5-2401e74a4283/id-preview-cb79d206--def38dd1-473e-4499-87b8-94f73486b646.lovable.app-1785881676766.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dbb85942-f650-4004-bfc5-2401e74a4283/id-preview-cb79d206--def38dd1-473e-4499-87b8-94f73486b646.lovable.app-1785881676766.png" },
     ],
@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hind:wght@400;500;600;700&display=swap",
       },
       {
         rel: "stylesheet",
