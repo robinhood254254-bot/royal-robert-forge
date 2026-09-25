@@ -30,7 +30,6 @@ const schema = z.object({
   email: z.string().trim().email("Enter a valid email address").max(255),
   contactMethod: z.string().min(1, "Choose a preferred contact method"),
   projectType: z.string().min(1, "Select a project type"),
-  budget: z.string().min(1, "Select an estimated budget"),
   timeline: z.string().min(1, "Select a preferred timeline"),
   description: z
     .string()
@@ -49,7 +48,6 @@ const initial: FormValues = {
   email: "",
   contactMethod: "WhatsApp",
   projectType: "",
-  budget: "",
   timeline: "",
   description: "",
 };
@@ -64,14 +62,6 @@ const projectTypes = [
   "Vehicle inventory / hire-purchase system",
   "Google Business Profile / digital visibility",
   "Not sure yet — need advice",
-];
-
-const budgets = [
-  "KSh 19,999 – 45,000",
-  "KSh 45,000 – 100,000",
-  "KSh 100,000 – 150,000",
-  "Above KSh 150,000",
-  "To be advised after consultation",
 ];
 
 const timelines = ["As soon as possible", "Within 2–4 weeks", "1–3 months", "Flexible / planning ahead"];
@@ -117,7 +107,6 @@ export function Contact() {
       `Email: ${d.email}`,
       `Preferred contact: ${d.contactMethod}`,
       `Project type: ${d.projectType}`,
-      `Estimated budget: ${d.budget}`,
       `Preferred timeline: ${d.timeline}`,
       "",
       "Requirements:",
@@ -207,7 +196,7 @@ export function Contact() {
                     "Features you expect (booking, payments, accounts, inventory…)",
                     "Your business goals and target customers",
                     "Preferred timeline and launch date",
-                    "An approximate budget range",
+                    "Any delivery deadline or important launch date",
                   ].map((t) => (
                     <li key={t} className="flex gap-2">
                       <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
@@ -303,22 +292,6 @@ export function Contact() {
                   >
                     <option value="">Select a project type</option>
                     {projectTypes.map((o) => (
-                      <option key={o} value={o}>
-                        {o}
-                      </option>
-                    ))}
-                  </select>
-                </Field>
-                <Field label="Estimated budget" required error={errors.budget} htmlFor="budget">
-                  <select
-                    id="budget"
-                    className={selectClass}
-                    data-invalid={Boolean(errors.budget)}
-                    value={values.budget}
-                    onChange={(e) => set("budget", e.target.value)}
-                  >
-                    <option value="">Select a range</option>
-                    {budgets.map((o) => (
                       <option key={o} value={o}>
                         {o}
                       </option>

@@ -7,8 +7,8 @@ import person from "@/assets/inspiration_advancement.webp";
 const pillars = [
   {
     icon: MessageSquare,
-    title: "Direct one-on-one communication",
-    body: "No account managers, no hand-offs. You speak with the person actually designing and building your product.",
+    title: "Clear communication",
+    body: "Practical conversations keep decisions, feedback and delivery focused throughout the project.",
   },
   {
     icon: Search,
@@ -32,17 +32,13 @@ export function About() {
     <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20" id="about">
       <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <Reveal className="relative mx-auto w-full max-w-md">
-          <div
-            aria-hidden
-            className="absolute inset-4 rounded-full bg-[var(--gradient-gold)] opacity-20 blur-3xl"
-          />
           <img
             src={person}
             alt="A client engaging with a tablet in front of the Royal Robert brand mark"
             loading="lazy"
-            className="relative w-full rounded-full border border-border shadow-[var(--shadow-elegant)]"
+            className="relative w-full border-8 border-gold shadow-[var(--shadow-elegant)]"
           />
-          <div className="relative mx-auto -mt-8 w-fit rounded-full border border-primary/30 bg-card/90 px-5 py-2.5 text-center backdrop-blur">
+          <div className="relative mx-auto -mt-8 w-fit border border-primary bg-card px-5 py-2.5 text-center">
             <p className="font-display text-sm font-semibold">Human first, technology second</p>
           </div>
         </Reveal>
@@ -51,13 +47,12 @@ export function About() {
           <Reveal>
             <p className="eyebrow">Who you work with</p>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              A dedicated professional who listens before building
+               Strategy first. Design and technology with a purpose.
             </h2>
             <p className="mt-4 max-w-2xl text-muted-foreground">
-              Royal Robert Digital Solutions is led by one committed developer and designer. That
-              means faster decisions, honest advice, and a solution shaped precisely around what
-              your business actually needs — from a first corporate website to vehicle inventory
-              and hire-purchase software.
+               We start by understanding the business, the audience and the result the solution
+               must create. That keeps every website, online store and software build focused on
+               useful outcomes rather than decoration or generic templates.
             </p>
           </Reveal>
 

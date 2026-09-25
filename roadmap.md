@@ -1,5 +1,5 @@
 # Redesign roadmap
-- [ ] Add and place all ten campaign visuals
-- [ ] Replace gradients and AI-styled presentation with flat editorial design
-- [ ] Remove all public pricing mentions and links
+- [x] Add and place all ten campaign visuals
+- [x] Replace gradients and AI-styled presentation with flat editorial design
+- [x] Remove all public pricing mentions and links
 - [ ] Verify pages, interactions, assets, and responsive layouts
