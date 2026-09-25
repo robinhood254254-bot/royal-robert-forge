@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import innovation from "@/assets/innovation_technology_and_SEO.webp";
 import store from "@/assets/online-store.webp";
 
 export const services = [
@@ -66,22 +65,11 @@ export const services = [
 
 export function Services({ compact = false }: { compact?: boolean }) {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-secondary/60 py-14 sm:py-16 lg:py-20">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url(${innovation})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          maskImage: "radial-gradient(70% 60% at 50% 0%, rgba(0,0,0,0.8), transparent 70%)",
-          WebkitMaskImage: "radial-gradient(70% 60% at 50% 0%, rgba(0,0,0,0.8), transparent 70%)",
-        }}
-      />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+    <section className="overflow-hidden border-y border-border bg-secondary py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">What I build</p>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold uppercase sm:text-4xl">
             Focused digital solutions, matched to your business stage
           </h2>
           <p className="mt-4 text-muted-foreground">
@@ -93,8 +81,8 @@ export function Services({ compact = false }: { compact?: boolean }) {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {(compact ? services.slice(0, 6) : services).map((s, i) => (
             <Reveal key={s.title} delay={(i % 3) * 90}>
-              <article className="group h-full rounded-2xl border border-border bg-surface/80 p-6 lift">
-                <span className="grid size-11 place-items-center rounded-xl border border-primary/25 bg-primary/10">
+              <article className="group h-full border border-border bg-background p-6 lift">
+                <span className="grid size-11 place-items-center border border-primary bg-primary/10">
                   <s.icon className="size-5 text-primary" />
                 </span>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -113,8 +101,8 @@ export function Services({ compact = false }: { compact?: boolean }) {
 
 
         <Reveal delay={140}>
-          <div className="mt-14 grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-elegant)] lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
-            <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
+          <div className="mt-14 grid items-center gap-8 overflow-hidden border-2 border-navy-deep bg-card p-6 lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
+            <div className="relative overflow-hidden bg-secondary/40">
               <img
                 src={store}
                 alt="Online store dashboard showing sales growth, conversion analytics and secure checkout"

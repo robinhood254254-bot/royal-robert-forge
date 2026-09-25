@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Sparkles, Timer, Star, Quote } from "lucide-react";
+import { ArrowRight, Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
 import { MonitorFrame } from "./Frames";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { waLink } from "@/lib/site";
-import innovation from "@/assets/innovation_technology_and_SEO.webp";
 import dealership from "@/assets/landing_page_for_a_car_website.webp";
 import mombasaHearing from "@/assets/mombasahearing.com.webp";
 import oceansmiles from "@/assets/oceansmiles.webp";
@@ -73,27 +72,10 @@ const testimonials = [
   },
 ];
 
-function useTypewriter(text: string, active: boolean) {
-  const [out, setOut] = useState("");
-  useEffect(() => {
-    if (!active) return;
-    setOut("");
-    let i = 0;
-    const id = setInterval(() => {
-      i += 1;
-      setOut(text.slice(0, i));
-      if (i >= text.length) clearInterval(id);
-    }, 34);
-    return () => clearInterval(id);
-  }, [text, active]);
-  return out;
-}
-
 export function Hero() {
   const [index, setIndex] = useState(0);
   const [tIndex, setTIndex] = useState(0);
   const current = headlines[index]!;
-  const typed = useTypewriter(current.typed, true);
 
   useEffect(() => {
     const id = setInterval(() => setIndex((v) => (v + 1) % headlines.length), 6200);
@@ -108,41 +90,21 @@ export function Hero() {
   const testimonial = useMemo(() => testimonials[tIndex]!, [tIndex]);
 
   return (
-    <section className="relative isolate overflow-hidden hero-surface">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage: `url(${innovation})`,
-          backgroundSize: "cover",
-          backgroundPosition: "top right",
-          maskImage: "linear-gradient(to left, rgba(0,0,0,0.95) 10%, rgba(0,0,0,0.45) 55%, transparent 85%)",
-          WebkitMaskImage:
-            "linear-gradient(to left, rgba(0,0,0,0.95) 10%, rgba(0,0,0,0.45) 55%, transparent 85%)",
-        }}
-      />
-      <div aria-hidden className="pointer-events-none absolute inset-0 grid-lines opacity-50" />
-
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pb-20 lg:pt-14">
+    <section className="relative isolate overflow-hidden border-b border-border bg-background">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:pb-16 lg:pt-12">
         <div>
-          <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3 py-1.5 text-xs font-semibold text-primary">
-              <Sparkles className="size-3.5" /> One dedicated professional · Direct communication
-            </span>
-          </Reveal>
-
-          <h1 className="mt-6 min-h-[8.5rem] text-4xl font-bold leading-[1.08] sm:min-h-[10rem] sm:text-5xl lg:min-h-[11.5rem] lg:text-6xl">
+          <p className="eyebrow border-l-4 border-gold pl-3">Royal Robert Digital Solutions</p>
+          <h1 className="mt-5 min-h-[8.5rem] text-4xl font-bold uppercase leading-[1.05] sm:min-h-[10rem] sm:text-5xl lg:min-h-[11.5rem] lg:text-6xl">
             <span className="block text-navy-deep">{current.lead}</span>
-            <span key={index} className="mt-2 block caret text-gradient-gold">
-              {typed}
+            <span key={index} className="mt-2 block text-primary">
+              {current.typed}
             </span>
           </h1>
 
           <Reveal delay={120}>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Corporate and portfolio websites, e-commerce platforms, custom web applications,
-              business software and Google Business Profile visibility — planned around your goals
-              in a real one-on-one conversation.
+               business software and digital visibility — designed around clear commercial goals.
             </p>
           </Reveal>
 
@@ -151,7 +113,7 @@ export function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-whatsapp font-semibold text-white glow-green transition-transform hover:scale-[1.03] hover:bg-whatsapp"
+                 className="rounded-sm bg-whatsapp font-semibold text-primary-foreground transition-transform hover:translate-y-[-2px] hover:bg-whatsapp"
               >
                 <a
                   href={waLink(
@@ -166,7 +128,7 @@ export function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full glow-primary transition-transform hover:scale-[1.03]"
+                 className="rounded-sm transition-transform hover:translate-y-[-2px]"
               >
                 <Link to="/contact">
                   Book a Free Consultation <ArrowRight />
@@ -176,19 +138,19 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={260}>
-            <div className="mt-8 max-w-xl overflow-hidden rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-elegant)]">
+            <div className="mt-8 max-w-xl overflow-hidden border-l-8 border-gold bg-navy-deep p-5 text-primary-foreground">
               <div className="flex items-center gap-1 text-primary">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="size-4 fill-current" />
                 ))}
               </div>
               <div key={tIndex} className="reveal reveal-in">
-                <p className="mt-3 flex gap-2 text-sm leading-relaxed text-foreground/85">
+                 <p className="mt-3 flex gap-2 text-sm leading-relaxed text-primary-foreground/85">
                   <Quote className="size-4 shrink-0 text-primary" />
                   {testimonial.quote}
                 </p>
                 <p className="mt-3 font-display text-sm font-semibold">{testimonial.name}</p>
-                <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                 <p className="text-xs text-primary-foreground/65">{testimonial.role}</p>
               </div>
               <div className="mt-4 flex gap-1.5">
                 {testimonials.map((t, i) => (
@@ -205,21 +167,6 @@ export function Hero() {
             </div>
           </Reveal>
 
-          <Reveal delay={320}>
-            <dl className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {[
-                { icon: ShieldCheck, k: "From KSh 19,999", v: "Transparent project pricing" },
-                { icon: Timer, k: "Direct line", v: "You talk to the builder" },
-                { icon: Sparkles, k: "Mobile-first", v: "Fast, responsive, SEO-ready" },
-              ].map((s) => (
-                <div key={s.k} className="rounded-xl border border-border bg-card p-4 lift">
-                  <s.icon className="size-4 text-primary" />
-                  <dt className="mt-2 font-display text-sm font-semibold">{s.k}</dt>
-                  <dd className="text-xs text-muted-foreground">{s.v}</dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
         </div>
 
         <Reveal delay={200} className="relative lg:sticky lg:top-28 lg:self-start">
@@ -247,7 +194,7 @@ export function Hero() {
                 className="w-full rounded-2xl border border-border shadow-[var(--shadow-elegant)]"
               />
             </div>
-            <div className="absolute -right-2 top-6 hidden rounded-xl border border-primary/20 bg-card/95 px-4 py-3 backdrop-blur sm:block">
+            <div className="absolute -right-2 top-6 hidden border border-primary/20 bg-card px-4 py-3 sm:block">
               <p className="eyebrow">{current.caption}</p>
               <p className="mt-1 font-display text-sm font-semibold">{current.project}</p>
             </div>

@@ -4,6 +4,7 @@ import { Services } from "@/components/site/Services";
 import { Process } from "@/components/site/Process";
 import { FutureLab } from "@/components/site/FutureLab";
 import { PageIntro } from "@/components/site/PageIntro";
+import { CampaignShowcase } from "@/components/site/CampaignShowcase";
 
 const title = "Web, E-commerce & Custom Software Services | Royal Robert";
 const description =
@@ -38,6 +39,7 @@ function ServicesPage() {
         body="From a first professional website to inventory and hire-purchase software — every engagement starts with understanding your requirements, then building only what serves them."
       />
       <Services />
+      <CampaignShowcase />
       <Process />
       <FutureLab />
     </>
