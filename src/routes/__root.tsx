@@ -7,7 +7,6 @@ import {
   useRouterState,
   HeadContent,
   Scripts,
-  lazyFn,
 } from "@tanstack/react-router";
 import { useEffect, lazy, type ReactNode } from "react";
 
