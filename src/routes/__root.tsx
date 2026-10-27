@@ -7,8 +7,9 @@ import {
   useRouterState,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, lazy, type ReactNode } from "react";
 
 
 import appCss from "../styles.css?url";
@@ -19,6 +20,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { WHATSAPP_LINK } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { ScrollToTop } from "@/components/site/ScrollToTop";
+import { GoogleAnalytics } from "@/components/site/GoogleAnalytics";
+
 
 
 function NotFoundComponent() {
@@ -43,12 +46,13 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
+  const normalized = error instanceof Error ? error : new Error(String(error));
+  console.error(normalized);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+    reportLovableError(normalized, { boundary: "tanstack_root_error_component" });
+  }, [normalized]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -119,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
+  errorComponent: lazy(() => Promise.resolve({ default: ErrorComponent })),
 });
 
 function RootShell({ children }: { children: ReactNode }) {
@@ -130,6 +134,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <GoogleAnalytics />
         <Scripts />
       </body>
     </html>
