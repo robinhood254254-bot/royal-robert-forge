@@ -7,7 +7,7 @@ import { createServerFn } from "@tanstack/react-start";
  * being hardcoded or exposed via a VITE_ variable.
  */
 export const getMeasurementId = createServerFn({ method: "GET" }).handler(() => {
-  return process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID ?? null;
+  return process.env["GOOGLE_ANALYTICS_MEASUREMENT_ID"] ?? null;
 });
 
 declare global {
