@@ -132,6 +132,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <GoogleAnalytics />
         <Scripts />
       </body>
     </html>
