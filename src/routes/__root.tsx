@@ -19,6 +19,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { WHATSAPP_LINK } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { ScrollToTop } from "@/components/site/ScrollToTop";
+import { GoogleAnalytics } from "@/components/site/GoogleAnalytics";
+
 
 
 function NotFoundComponent() {
